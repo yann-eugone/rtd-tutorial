@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Yokai Batch'
+copyright = '2019, Yann Eugoné'
+author = 'Yann Eugoné'
 
 release = '0.1'
 version = '0.1.0'
