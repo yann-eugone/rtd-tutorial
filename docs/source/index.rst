@@ -1,22 +1,18 @@
-Welcome to Lumache's documentation!
+Welcome to Yokai Batch documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Yokai Batch** is batch processing job library written with PHP, with zero dependencies.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
+With this library, you will be able to
+- :bookmark_tabs: keep track of the execution of your jobs
+- :rocket: have base classes to handle batch processing jobs
+- :recycle: have decoupled reusable components to compose your jobs
+- :factory: have bridges with popular libraries and frameworks
 
 Contents
 --------
 
 .. toctree::
 
-   usage
-   api
+   getting-started
+   bridges
