@@ -17,12 +17,12 @@ what are the concepts introduced in it.
 This is highly recommended that you read this entire page before
 starting to work with this library.
 
--  `Job <domain/job.md>`__: where you are going to work as a developer.
--  `Job Launcher <domain/job-launcher.md>`__: The entry point when you
+-  `Job <domain/job>`__: where you are going to work as a developer.
+-  `Job Launcher <domain/job-launcher>`__: The entry point when you
    need to execute any job.
--  `Job Execution <domain/job-execution.md>`__: The representation of a
+-  `Job Execution <domain/job-execution>`__: The representation of a
    certain execution of certain job.
--  `Job Execution Storage <domain/job-execution-storage.md>`__: The
+-  `Job Execution Storage <domain/job-execution-storage>`__: The
    persistence layer of jobs executions.
 
 

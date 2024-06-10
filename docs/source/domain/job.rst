@@ -35,18 +35,20 @@ The only requirement is implementing
 What types of job exists ?
 --------------------------
 
-**Built-in jobs:** -
-`AbstractDecoratedJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/AbstractDecoratedJob.php>`__: a job
-that is designed to be extended, helps job construction. -
-`ItemJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/Item/ItemJob.php>`__: ETL like, batch processing
-job (`documentation <item-job.md>`__). -
-`JobWithChildJobs <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobWithChildJobs.php>`__: a job that
-trigger other jobs (`documentation <job-with-children.md>`__). -
-`TriggerScheduledJobsJob <https://github.com/yokai-php/batch/tree/0.x/src/Trigger/TriggerScheduledJobsJob.php>`__:
+**Built-in jobs:**
+- `AbstractDecoratedJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/AbstractDecoratedJob.php>`__: a job
+that is designed to be extended, helps job construction.
+- `ItemJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/Item/ItemJob.php>`__: ETL like, batch processing
+job (`documentation <item-job>`__).
+- `JobWithChildJobs <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobWithChildJobs.php>`__: a job that
+trigger other jobs.
+- `TriggerScheduledJobsJob <https://github.com/yokai-php/batch/tree/0.x/src/Trigger/TriggerScheduledJobsJob.php>`__:
 a job that trigger other jobs when schedule is due (todo documentation).
 
-**Jobs from bridges:** - `CopyFilesJob
+**Jobs from bridges:**
+- `CopyFilesJob
 (``league/flysystem``) <https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/CopyFilesJob.php>`__:
-copy files from one filesystem to another. - `MoveFilesJob
+copy files from one filesystem to another.
+- `MoveFilesJob
 (``league/flysystem``) <https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/MoveFilesJob.php>`__:
 move files from one filesystem to another.
