@@ -8,7 +8,12 @@ Each package has it's own repository, and here is the complete list of what to e
 
 .. toctree::
 
-   bridges/doctrine-dbal
-   bridges/doctrine-orm
-   bridges/openspout
-   bridges/symfony-messenger
+   Doctrine DBAL <bridges/doctrine-dbal>
+   Doctrine ORM <bridges/doctrine-orm>
+   Doctrine Persistence <bridges/doctrine-persistence>
+   Flysystem <bridges/league-flysystem>
+   OpenSpout <bridges/openspout>
+   Symfony Console <bridges/symfony-console>
+   Symfony Messenger <bridges/symfony-messenger>
+   Symfony Serializer <bridges/symfony-serializer>
+   Symfony Validator <bridges/symfony-validator>

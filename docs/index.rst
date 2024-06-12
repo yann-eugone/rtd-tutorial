@@ -22,9 +22,20 @@ With this library, you will be able to
 
 .. toctree::
    :hidden:
+   :caption: Frameworks
+
+   Symfony <frameworks/symfony>
+
+.. toctree::
+   :hidden:
    :caption: Bridges
 
    Doctrine DBAL <bridges/doctrine-dbal>
    Doctrine ORM <bridges/doctrine-orm>
-   OpenSpout<bridges/openspout>
+   Doctrine Persistence <bridges/doctrine-persistence>
+   Flysystem <bridges/league-flysystem>
+   OpenSpout <bridges/openspout>
+   Symfony Console <bridges/symfony-console>
    Symfony Messenger <bridges/symfony-messenger>
+   Symfony Serializer <bridges/symfony-serializer>
+   Symfony Validator <bridges/symfony-validator>
