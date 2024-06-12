@@ -9,11 +9,22 @@ With this library, you will be able to
 - :recycle: have decoupled reusable components to compose your jobs
 - :factory: have bridges with popular libraries and frameworks
 
-Contents
---------
+.. toctree::
+   :hidden:
+   :caption: Documentation
+
+   Getting Started <getting-started>
+   What is a Job ?<job>
+   How to launch a Job ?<job-launcher>
+   How is batch processing done ?<item-job>
+   What is the JobExecution ?<job-execution>
+   Where are stored my JobExecution ?<job-execution-storage>
 
 .. toctree::
-   :maxdepth: 1
+   :hidden:
+   :caption: Bridges
 
-   getting-started
-   bridges
+   Doctrine DBAL <bridges/doctrine-dbal>
+   Doctrine ORM <bridges/doctrine-orm>
+   OpenSpout<bridges/openspout>
+   Symfony Messenger <bridges/symfony-messenger>
