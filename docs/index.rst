@@ -14,11 +14,11 @@ With this library, you will be able to
    :caption: Documentation
 
    Getting Started <getting-started>
-   What is a Job ?<job>
-   How to launch a Job ?<job-launcher>
-   How is batch processing done ?<item-job>
-   What is the JobExecution ?<job-execution>
-   Where are stored my JobExecution ?<job-execution-storage>
+   What is a Job ?<domain/job>
+   How to launch a Job ?<domain/job-launcher>
+   How is batch processing done ?<domain/item-job>
+   What is the JobExecution ?<domain/job-execution>
+   Where are stored my JobExecution ?<domain/job-execution-storage>
 
 .. toctree::
    :hidden:
