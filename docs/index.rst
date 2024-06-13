@@ -5,10 +5,10 @@ Welcome to Yokai Batch documentation!
 
 With this library, you will be able to
 
-* :bookmark_tabs: keep track of the execution of your jobs
-* :rocket: have base classes to handle batch processing jobs
-* :recycle: have decoupled reusable components to compose your jobs
-* :factory: have bridges with popular libraries and frameworks
+* 📑 keep track of the execution of your jobs
+* 🚀 have base classes to handle batch processing jobs
+* ♻️ have decoupled reusable components to compose your jobs
+* 🏭 have bridges with popular libraries and frameworks
 
 .. toctree::
    :hidden:
