@@ -50,6 +50,10 @@ that will read from CSV/ODS/XLSX file and return each line as an array.
        HeaderStrategy::combine(),
    );
 
+.. seealso::
+
+   :doc:`What is an item reader? </domain/item-job/item-reader.md>`
+
 Item writer
 -----------
 

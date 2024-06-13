@@ -64,7 +64,7 @@ other format of your choice.
 
 .. note::
    When registering jobs with dedicated class, you can use the
-   `JobWithStaticNameInterface <../../src/batch-symfony-framework/src/JobWithStaticNameInterface.php>`__
+   `JobWithStaticNameInterface <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/JobWithStaticNameInterface.php>`__
    interface to be able to specify the job name of your service.
    Otherwise, the service id will be used, and in that case, the service
    id is the FQCN.
@@ -98,6 +98,7 @@ specified):
 
 The job launcher that will be injected depends on the packages you have
 installed, order matter:
+
 * if ``yokai/batch-symfony-messenger`` is installed, you will receive a
 ``Yokai\Batch\Bridge\Symfony\Messenger\DispatchMessageJobLauncher``
 * if ``yokai/batch-symfony-console`` is installed, you will receive a

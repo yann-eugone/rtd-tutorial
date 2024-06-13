@@ -43,12 +43,13 @@ Templating
 ~~~~~~~~~~
 
 The templating service is used by the
-`JobController <../../src/batch-symfony-framework/src/UserInterface/Controller/JobController.php>`__
+`JobController <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/UserInterface/Controller/JobController.php>`__
 to render its templates. It’s a wrapper around
 `Twig <https://twig.symfony.com/>`__, for you to control templates used,
 and variables passed.
 
 By default
+
 * the templating will find templates like ``@YokaiBatch/bootstrap4/*.html.twig``
 * the template base view will be ``base.html.twig``
 
@@ -228,11 +229,13 @@ Customizing templates
 You can override templates like `described it Symfony’s
 documentation <https://symfony.com/doc/current/bundles/override.html>`__.
 Examples:
+
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/list.html.twig``
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/_parameters.html.twig``
 
 But you can also register job name dedicated templates if you need some
 specific view for one of your jobs:
+
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_children-executions.html.twig``
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_failures.html.twig``
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_general.html.twig``

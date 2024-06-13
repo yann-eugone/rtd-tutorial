@@ -7,10 +7,11 @@ Command
 --------------
 
 The
-`RunJobCommand <../../src/batch-symfony-console/src/RunJobCommand.php>`__
+`RunJobCommand <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/src/RunJobCommand.php>`__
 can execute any job.
 
 The command accepts 2 arguments :
+
 * the job name to execute
 * the job parameters for the ``JobExecution`` (optional)
 
@@ -26,7 +27,7 @@ Job launcher
 --------------
 
 The
-`RunCommandJobLauncher <../../src/batch-symfony-console/src/RunCommandJobLauncher.php>`__
+`RunCommandJobLauncher <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/src/RunCommandJobLauncher.php>`__
 execute jobs via an asynchronous symfony command.
 
 The command called is ```yokai:batch:run`` <command.md>`__, and the

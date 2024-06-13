@@ -15,6 +15,7 @@ If you are familiar with the concept of an
 is pretty much the same.
 
 The item job allows you to split your logic into 3 different component :
+
 * an item reader: stands for **Extract** in ETL
 * an item processor: stands for **Transform** in ETL
 * an item writer: stands for **Load** in ETL
