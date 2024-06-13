@@ -25,4 +25,5 @@ What kind of information does it hold ?
 .. seealso::
 
    :doc:`How is a job execution created? </domain/job-launcher>`
+
    :doc:`How can I retrieve a job execution afterwards? </domain/job-execution-storage>`

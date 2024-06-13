@@ -69,4 +69,5 @@ How to create an item job ?
 .. seealso::
 
    :doc:`What is a job? </domain/job>`
+
    :doc:`What is a job launcher? </domain/job-launcher>`

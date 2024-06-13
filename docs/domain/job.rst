@@ -56,5 +56,7 @@ move files from one filesystem to another.
 .. seealso::
 
    :doc:`How do I start a job? </domain/job-launcher>`
+
    :doc:`How do I build a batch processing job? </domain/item-job>`
+
    :doc:`How do I access parameters of a job? </domain/job-with-children>`
