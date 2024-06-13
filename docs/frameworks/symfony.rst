@@ -69,6 +69,10 @@ other format of your choice.
    Otherwise, the service id will be used, and in that case, the service
    id is the FQCN.
 
+.. seealso::
+
+   :doc:`What is a job? </domain/job>`
+
 Triggering the job
 ------------------
 

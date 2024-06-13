@@ -37,3 +37,7 @@ You will end with something like :
                async: "%env(MESSENGER_TRANSPORT_DSN)%"
            routing:
                'Yokai\Batch\Bridge\Symfony\Messenger\LaunchJobMessage':  async
+
+.. seealso::
+
+   :doc:`What is a job launcher? </domain/job-launcher>`

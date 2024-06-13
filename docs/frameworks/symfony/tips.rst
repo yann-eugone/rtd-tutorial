@@ -28,3 +28,7 @@ by naming your variable as ``$yokaiBatchLogger``
            $this->yokaiBatchLogger->error(...);
        }
    }
+
+.. seealso::
+
+   :doc:`What is the job execution? </domain/job-execution>`

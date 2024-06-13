@@ -32,8 +32,7 @@ able to register these using configuration:
 ..
 
 .. note::
-   If you do not configure anything here, you will be using
-   the
+   If you do not configure anything here, you will be using the
    ```SimpleJobLauncher`` <https://github.com/yokai-php/batch/blob/0.x/src/src/Launcher/SimpleJobLauncher.php>`__.
 
 The ``default`` job launcher, must reference a launcher name, defined in
@@ -68,6 +67,10 @@ All ``launchers`` are configured using a DSN, every scheme has it’s own associ
 * ``service://service``: pointing to a service of your choice, configurable options:
   * ``service``: the id of the service to use (required, an exception will be thrown otherwise)
 
+.. seealso::
+
+   :doc:`What is a job launcher? </domain/job-launcher>`
+
 JobExecution storage
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -96,3 +99,7 @@ several options:
    ``doctrine/dbal`` in your project, it is highly recommended to use it
    instead. Because querying ``JobExecution`` in a filesystem might be
    slow, specially if you are planing to add UIs on top.
+
+.. seealso::
+
+   :doc:`What is a job execution storage? </domain/job-execution-storage>`

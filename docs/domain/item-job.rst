@@ -16,9 +16,9 @@ is pretty much the same.
 
 The item job allows you to split your logic into 3 different component :
 
-* an item reader: stands for **Extract** in ETL
-* an item processor: stands for **Transform** in ETL
-* an item writer: stands for **Load** in ETL
+* an `item reader <item-job/item-reader>`__: stands for **Extract** in ETL
+* an `item processor <item-job/item-processor>`__: stands for **Transform** in ETL
+* an `item writer <item-job/item-writer>`__: stands for **Load** in ETL
 
 How to create an item job ?
 ---------------------------
@@ -65,3 +65,8 @@ How to create an item job ?
    }
 
    $job = new ItemJob(2, new ItemReader(), new ItemProcessor(), new ItemWriter(), new NullJobExecutionStorage());
+
+.. seealso::
+
+   :doc:`What is a job? </domain/job>`
+   :doc:`What is a job launcher? </domain/job-launcher>`

@@ -52,3 +52,9 @@ a job that trigger other jobs when schedule is due (todo documentation).
 copy files from one filesystem to another.
 * `MoveFilesJob (``league/flysystem``) <https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/MoveFilesJob.php>`__:
 move files from one filesystem to another.
+
+.. seealso::
+
+   :doc:`How do I start a job? </domain/job-launcher>`
+   :doc:`How do I build a batch processing job? </domain/item-job>`
+   :doc:`How do I access parameters of a job? </domain/job-with-children>`

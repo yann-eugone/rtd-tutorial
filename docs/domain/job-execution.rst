@@ -21,3 +21,8 @@ What kind of information does it hold ?
 * ``JobExecution::$summary`` : A summary (can contain any data you wish to store)
 * ``JobExecution::$logs`` : Some logs
 * ``JobExecution::$childExecutions`` : Some child execution
+
+.. seealso::
+
+   :doc:`How is a job execution created? </domain/job-launcher>`
+   :doc:`How can I retrieve a job execution afterwards? </domain/job-execution-storage>`

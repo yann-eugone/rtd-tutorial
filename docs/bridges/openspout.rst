@@ -52,7 +52,7 @@ that will read from CSV/ODS/XLSX file and return each line as an array.
 
 .. seealso::
 
-   :doc:`What is an item reader? </domain/item-job/item-reader.md>`
+   :doc:`What is an item reader? </domain/item-job/item-reader>`
 
 Item writer
 -----------
@@ -102,3 +102,7 @@ line.
        'The sheet name',
        ['static', 'header', 'keys'],
    );
+
+.. seealso::
+
+   :doc:`What is an item writer? </domain/item-job/item-writer>`
