@@ -90,3 +90,7 @@ will call ``Doctrine\Persistence\ObjectManager::find`` instead. If the
 object is still in Doctrine’s memory, it will be returned directly.
 Otherwise, the query will be the fastest possible because it will use
 the object identity.
+
+.. seealso::
+
+   :doc:`What is an item job? </domain/job>`
