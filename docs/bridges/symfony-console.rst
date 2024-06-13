@@ -10,8 +10,9 @@ The
 `RunJobCommand <../../src/batch-symfony-console/src/RunJobCommand.php>`__
 can execute any job.
 
-The command accepts 2 arguments : - the job name to execute - the job
-parameters for the ``JobExecution`` (optional)
+The command accepts 2 arguments :
+* the job name to execute
+* the job parameters for the ``JobExecution`` (optional)
 
 Examples :
 

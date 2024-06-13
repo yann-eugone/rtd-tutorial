@@ -97,10 +97,10 @@ specified):
    }
 
 The job launcher that will be injected depends on the packages you have
-installed, order matter: - if ``yokai/batch-symfony-messenger`` is
-installed, you will receive a
-``Yokai\Batch\Bridge\Symfony\Messenger\DispatchMessageJobLauncher`` - if
-``yokai/batch-symfony-console`` is installed, you will receive a
-``Yokai\Batch\Bridge\Symfony\Console\RunCommandJobLauncher`` - otherwise
-you will receive a ``Yokai\Batch\Launcher\SimpleJobLauncher``
+installed, order matter:
+* if ``yokai/batch-symfony-messenger`` is installed, you will receive a
+``Yokai\Batch\Bridge\Symfony\Messenger\DispatchMessageJobLauncher``
+* if ``yokai/batch-symfony-console`` is installed, you will receive a
+``Yokai\Batch\Bridge\Symfony\Console\RunCommandJobLauncher``
+* otherwise you will receive a ``Yokai\Batch\Launcher\SimpleJobLauncher``
 

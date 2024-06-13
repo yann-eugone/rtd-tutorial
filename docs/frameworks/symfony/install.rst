@@ -59,28 +59,23 @@ will be able to register all these launchers like this:
        }
    }
 
-All ``launchers`` are configured using a DSN, every scheme has it’s own
-associated factory. - ``simple://simple``: a
-```SimpleJobLauncher`` <../../src/batch/src/Launcher/SimpleJobLauncher.php>`__,
-no configuration allowed - ``messenger://messenger``: a
-```DispatchMessageJobLauncher`` <../../src/batch-symfony-messenger/src/DispatchMessageJobLauncher.php>`__,
-no configuration allowed - ``console://console``: a
-```RunCommandJobLauncher`` <../../src/batch-symfony-console/src/RunCommandJobLauncher.php>`__,
-configurable options: - ``log``: the filename where command output will
-be redirected (defaults to ``batch_execute.log``) -
-``service://service``: pointing to a service of your choice,
-configurable options: - ``service``: the id of the service to use
-(required, an exception will be thrown otherwise)
+All ``launchers`` are configured using a DSN, every scheme has it’s own associated factory:
+* ``simple://simple``: a ```SimpleJobLauncher`` <../../src/batch/src/Launcher/SimpleJobLauncher.php>`__, no configuration allowed
+* ``messenger://messenger``: a ```DispatchMessageJobLauncher`` <../../src/batch-symfony-messenger/src/DispatchMessageJobLauncher.php>`__, no configuration allowed
+* ``console://console``: a ```RunCommandJobLauncher`` <../../src/batch-symfony-console/src/RunCommandJobLauncher.php>`__, configurable options:
+  * ``log``: the filename where command output will be redirected (defaults to ``batch_execute.log``)
+* ``service://service``: pointing to a service of your choice, configurable options:
+  * ``service``: the id of the service to use (required, an exception will be thrown otherwise)
 
 JobExecution storage
 ~~~~~~~~~~~~~~~~~~~~
 
 You can have only one storage for your ``JobExecution``, and you have
-several options: - ``filesystem`` will create a file for each
-``JobExecution`` in
+several options:
+* ``filesystem`` will create a file for each ``JobExecution`` in
 ``%kernel.project_dir%/var/batch/{execution.jobName}/{execution.id}.json``
-- ``dbal`` will create a row in a table for each ``JobExecution`` -
-``service`` will use a service you have defined in your application
+* ``dbal`` will create a row in a table for each ``JobExecution``
+* ``service`` will use a service you have defined in your application
 
 .. code:: yaml
 
@@ -92,8 +87,6 @@ several options: - ``filesystem`` will create a file for each
            # dbal: ~
            # Or with a service of yours
            # service: ~
-
-..
 
 .. note::
    The default storage is ``filesystem``, because it only

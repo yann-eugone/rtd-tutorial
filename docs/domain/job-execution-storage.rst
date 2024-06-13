@@ -30,9 +30,9 @@ that has a method called ``retrieve``. Use this method to retrieve one
 execution using job name and execution id.
 
 Depending on which storage you decided to use, you may also be able to:
-- list of all executions for particular job, if your storage implements
+* list of all executions for particular job, if your storage implements
 `ListableJobExecutionStorageInterface <https://github.com/yokai-php/batch/tree/0.x/src/Storage/ListableJobExecutionStorageInterface.php>`__:
-- filter list of executions matching criteria you provided, if your
+* filter list of executions matching criteria you provided, if your
 storage implements
 `QueryableJobExecutionStorageInterface <https://github.com/yokai-php/batch/tree/0.x/src/Storage/QueryableJobExecutionStorageInterface.php>`__:
 
@@ -45,17 +45,17 @@ What types of storages exists ?
 -------------------------------
 
 **Built-in storages:**
-- `NullJobExecutionStorage <https://github.com/yokai-php/batch/tree/0.x/src/Storage/NullJobExecutionStorage.php>`__:
+* `NullJobExecutionStorage <https://github.com/yokai-php/batch/tree/0.x/src/Storage/NullJobExecutionStorage.php>`__:
 do not persist any job execution.
-- `FilesystemJobExecutionStorage <https://github.com/yokai-php/batch/tree/0.x/src/Storage/FilesystemJobExecutionStorage.php>`__:
+* `FilesystemJobExecutionStorage <https://github.com/yokai-php/batch/tree/0.x/src/Storage/FilesystemJobExecutionStorage.php>`__:
 store job executions to a file on local filesystem.
 
 **Storages from bridges:**
-- `DoctrineDBALJobExecutionStorage
+* `DoctrineDBALJobExecutionStorage
 (``doctrine/dbal``) <https://github.com/yokai-php/batch-doctrine-dbal/blob/0.x/src/DoctrineDBALJobExecutionStorage.php>`__:
 store job executions to a relational database.
 
 **Storages for testing purpose:**
-- `InMemoryJobExecutionStorage <https://github.com/yokai-php/batch/tree/0.x/src/Test/Storage/InMemoryJobExecutionStorage.php>`__:
+* `InMemoryJobExecutionStorage <https://github.com/yokai-php/batch/tree/0.x/src/Test/Storage/InMemoryJobExecutionStorage.php>`__:
 store executions in a private var that can be accessed afterwards in
 your tests.

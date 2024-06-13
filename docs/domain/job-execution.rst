@@ -10,18 +10,14 @@ information about one execution of a `job <job>`__.
 What kind of information does it hold ?
 ---------------------------------------
 
--  ``JobExecution::$jobName`` : The Job name (job id)
--  ``JobExecution::$id`` : The execution id
--  ``JobExecution::$parameters`` : Some parameters with which job was
-   executed
--  ``JobExecution::$status`` : A status (pending, running, stopped,
-   completed, abandoned, failed)
--  ``JobExecution::$startTime`` : Start time
--  ``JobExecution::$endTime`` : End time
--  ``JobExecution::$failures`` : A list of failures (usually exceptions)
--  ``JobExecution::$warnings`` : A list of warnings (usually skipped
-   items)
--  ``JobExecution::$summary`` : A summary (can contain any data you wish
-   to store)
--  ``JobExecution::$logs`` : Some logs
--  ``JobExecution::$childExecutions`` : Some child execution
+* ``JobExecution::$jobName`` : The Job name (job id)
+* ``JobExecution::$id`` : The execution id
+* ``JobExecution::$parameters`` : Some parameters with which job was executed
+* ``JobExecution::$status`` : A status (pending, running, stopped, completed, abandoned, failed)
+* ``JobExecution::$startTime`` : Start time
+* ``JobExecution::$endTime`` : End time
+* ``JobExecution::$failures`` : A list of failures (usually exceptions)
+* ``JobExecution::$warnings`` : A list of warnings (usually skipped items)
+* ``JobExecution::$summary`` : A summary (can contain any data you wish to store)
+* ``JobExecution::$logs`` : Some logs
+* ``JobExecution::$childExecutions`` : Some child execution

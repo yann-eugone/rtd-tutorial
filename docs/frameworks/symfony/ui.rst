@@ -48,9 +48,9 @@ to render its templates. It’s a wrapper around
 `Twig <https://twig.symfony.com/>`__, for you to control templates used,
 and variables passed.
 
-   By default - the templating will find templates like
-   ``@YokaiBatch/bootstrap4/*.html.twig`` - the template base view will
-   be ``base.html.twig``
+By default
+* the templating will find templates like ``@YokaiBatch/bootstrap4/*.html.twig``
+* the template base view will be ``base.html.twig``
 
 You can configure a prefix for all templates:
 
@@ -227,22 +227,16 @@ Customizing templates
 
 You can override templates like `described it Symfony’s
 documentation <https://symfony.com/doc/current/bundles/override.html>`__.
-Examples: -
-``templates/bundles/YokaiBatchBundle/bootstrap4/list.html.twig`` -
-``templates/bundles/YokaiBatchBundle/bootstrap4/show/_parameters.html.twig``
+Examples:
+* ``templates/bundles/YokaiBatchBundle/bootstrap4/list.html.twig``
+* ``templates/bundles/YokaiBatchBundle/bootstrap4/show/_parameters.html.twig``
 
 But you can also register job name dedicated templates if you need some
-specific view for one of your jobs: -
-``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_children-executions.html.twig``
--
-``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_failures.html.twig``
--
-``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_general.html.twig``
--
-``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_information.html.twig``
--
-``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_parameters.html.twig``
--
-``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_summary.html.twig``
--
-``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_warnings.html.twig``
+specific view for one of your jobs:
+* ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_children-executions.html.twig``
+* ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_failures.html.twig``
+* ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_general.html.twig``
+* ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_information.html.twig``
+* ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_parameters.html.twig``
+* ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_summary.html.twig``
+* ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_warnings.html.twig``
