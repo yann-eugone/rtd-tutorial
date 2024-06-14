@@ -17,7 +17,6 @@ What types of item readers exists ?
   read a file line by line, and decode each line as JSON.
 * `AddMetadataReader <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Reader/AddMetadataReader.php>`__:
   decorates another reader by adding static information to each read item.
-
 * `IndexWithReader <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Reader/IndexWithReader.php>`__:
   decorates another reader by changing index of each item.
 * `ParameterAccessorReader <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Reader/ParameterAccessorReader.php>`__:
@@ -39,14 +38,14 @@ What types of item readers exists ?
 * From ``doctrine/dbal`` bridge:
 
   * `DoctrineDBALQueryOffsetReader <https://github.com/yokai-php/batch-doctrine-dbal/blob/0.x/src/src/DoctrineDBALQueryOffsetReader.php>`__:
-  read execute an SQL query and iterate over results, using a limit + offset pagination strategy.
+    execute an SQL query and iterate over results, using a limit + offset pagination strategy.
   * `DoctrineDBALQueryCursorReader <https://github.com/yokai-php/batch-doctrine-dbal/blob/0.x/src/src/DoctrineDBALQueryCursorReader.php>`__:
-  read execute an SQL query and iterate over results, using a column based cursor strategy.
+    execute an SQL query and iterate over results, using a column based cursor strategy.
 
 * From ``doctrine/orm`` bridge:
 
   * `EntityReader <https://github.com/yokai-php/batch-doctrine-orm/blob/0.x/src/src/EntityReader.php>`__:
-  read from any Doctrine ORM entity.
+    read from any Doctrine ORM entity.
 
 **Item readers for testing purpose:**
 
