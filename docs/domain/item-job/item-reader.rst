@@ -1,13 +1,13 @@
-What is an item reader ?
-========================
+What is an item reader?
+=======================
 
 The item reader is used by the item job to extract item from a source.
 
 It can be any class implementing
 `ItemReaderInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/ItemReaderInterface.php>`__.
 
-What types of item readers exists ?
------------------------------------
+What types of item readers exists?
+----------------------------------
 
 **Built-in item readers:**
 

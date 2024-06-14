@@ -27,8 +27,8 @@ instance to retrieve that value.
        }
    }
 
-What types of parameter accessors exists ?
-------------------------------------------
+What types of parameter accessors exists?
+-----------------------------------------
 
 **Built-in parameter accessors:**
 * `ChainParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ChainParameterAccessor.php>`__:

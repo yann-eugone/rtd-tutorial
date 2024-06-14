@@ -1,8 +1,8 @@
 Job execution storage
 =====================
 
-What is a job execution storage ?
----------------------------------
+What is a job execution storage?
+--------------------------------
 
 Whenever a job is launched, whether is starts immediately or not, an
 execution is stored for it.
@@ -12,8 +12,8 @@ happening.
 
 This persistence is on the responsibility of the job execution storage.
 
-How do I store my Job Execution ?
----------------------------------
+How do I store my Job Execution?
+--------------------------------
 
 You should never be forced to store ``JobExecution`` yourself.
 
@@ -21,8 +21,8 @@ This is `JobLauncher <job-launcher>`__\ ’s job to store it whenever
 it is required (usually at the beginning and the end of the job
 execution).
 
-How can I retrieve a Job Execution afterwards ?
------------------------------------------------
+How can I retrieve a Job Execution afterwards?
+----------------------------------------------
 
 Every storage implements
 `JobExecutionStorageInterface <https://github.com/yokai-php/batch/tree/0.x/src/Storage/JobExecutionStorageInterface.php>`__
@@ -40,8 +40,8 @@ Depending on which storage you decided to use, you may also be able to:
    Sometimes the storage may implement these interfaces,
    but due to the way executions are stored, it might not be recommended heavily rely on these extra methods.
 
-What types of storages exists ?
--------------------------------
+What types of storages exists?
+------------------------------
 
 **Built-in storages:**
 

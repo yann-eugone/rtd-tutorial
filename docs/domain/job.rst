@@ -1,16 +1,16 @@
 Job
 ===
 
-What is a job ?
----------------
+What is a job?
+--------------
 
 A job is the class that is responsible for **what** your code is doing.
 
 This is the class you will have to create (or reuse), as it contains the
 business logic required for what you wish to achieve.
 
-How to create a job ?
----------------------
+How to create a job?
+--------------------
 
 .. code:: php
    <?php
@@ -29,8 +29,8 @@ How to create a job ?
 The only requirement is implementing
 `JobInterface <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobInterface.php>`__,
 
-What types of job exists ?
---------------------------
+What types of job exists?
+-------------------------
 
 **Built-in jobs:**
 

@@ -1,13 +1,13 @@
-What is an item writer ?
-========================
+What is an item writer?
+=======================
 
 The item writer is used by the item job to load every processed item.
 
 It can be any class implementing
 `ItemWriterInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/ItemWriterInterface.php>`__.
 
-What types of item writers exists ?
------------------------------------
+What types of item writers exists?
+----------------------------------
 
 **Built-in item writers:** 
 

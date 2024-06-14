@@ -1,13 +1,13 @@
-What is an item processor ?
-===========================
+What is an item processor?
+==========================
 
 The item processor is used by the item job to transform every read item.
 
 It can be any class implementing
 `ItemProcessorInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/ItemProcessorInterface.php>`__.
 
-What types of item processors exists ?
---------------------------------------
+What types of item processors exists?
+-------------------------------------
 
 **Built-in item processors:**
 

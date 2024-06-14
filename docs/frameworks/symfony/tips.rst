@@ -2,7 +2,7 @@ Tips with ``yokai/batch`` in a Symfony Project
 ==============================================
 
 Use the batch logger
--------------------
+--------------------
 
 | The batch logger will log inside the JobExecution.
 | In a Symfony project, you can use that with the symfony autowiring

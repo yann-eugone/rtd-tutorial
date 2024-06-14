@@ -15,7 +15,7 @@ message will be dispatched and handled by the
 `LaunchJobMessageHandler <https://github.com/yokai-php/batch-symfony-messenger/blob/0.x/src/LaunchJobMessageHandler.php>`__
 will be called with that message after being routed.
 
-How to configure an async transport for the launcher ?
+How to configure an async transport for the launcher?
 ------------------------------------------------------
 
 You first need to configure an async transport, like explained

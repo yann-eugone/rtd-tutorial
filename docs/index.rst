@@ -1,5 +1,5 @@
-Welcome to Yokai Batch documentation!
-=====================================
+Yokai Batch: Batch processing with PHP
+======================================
 
 **Yokai Batch** is batch processing job library written with PHP, with zero dependencies.
 
@@ -10,16 +10,16 @@ With this library, you will be able to:
 * ♻️ have decoupled reusable components to compose your jobs
 * 🏭 have bridges with popular libraries and frameworks
 
-What is Batch ?
----------------
+What is Batch?
+--------------
 
 | The Batch library solves all your massive data processing problems.
 | It can also be seen as an ETL.
 | It can works both synchronously & asynchronously.
 | It will store execution results, so you can access it afterwards.
 
-How it works ?
---------------
+How it works?
+-------------
 
 Batch will allow you to declare and execute jobs.
 
