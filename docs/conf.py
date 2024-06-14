@@ -29,8 +29,9 @@ templates_path = ['_templates']
 
 html_static_path = ['_static']
 
-def setup(app):
-    app.add_stylesheet('styles/custom.css')
+html_css_files = [
+    'styles/custom.css',
+]
 
 # -- Options for HTML output
 
