@@ -34,4 +34,4 @@ Additionally, the command will run with an output redirect (``>>``) to ``var/log
 
 .. seealso::
 
-   :doc:`What is a job launcher? </domain/job-launcher>`
+   :doc:`What is a job launcher?<domain/job-launcher>`
