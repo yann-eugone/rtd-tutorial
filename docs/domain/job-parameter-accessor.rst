@@ -34,7 +34,7 @@ What types of parameter accessors exists ?
 ------------------------------------------
 
 **Built-in parameter accessors:**
-* `ChainParameterAccessor.php <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ChainParameterAccessor.php>`__:
+* `ChainParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ChainParameterAccessor.php>`__:
   try multiple parameter accessors, the first that is not failing is used.
 * `ClosestJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ClosestJobExecutionAccessor.php>`__:
   try another parameter accessor on each job execution in hierarchy, until not failed.

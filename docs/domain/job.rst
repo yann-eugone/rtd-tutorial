@@ -40,7 +40,7 @@ What types of job exists ?
 * `AbstractDecoratedJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/AbstractDecoratedJob.php>`__: a job
   that is designed to be extended, helps job construction.
 * `ItemJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/Item/ItemJob.php>`__: ETL like, batch processing
-  job (`documentation </domain/item-job>`__).
+  job (:doc:`documentation </domain/item-job>`).
 * `JobWithChildJobs <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobWithChildJobs.php>`__: a job that
   trigger other jobs.
 * `TriggerScheduledJobsJob <https://github.com/yokai-php/batch/tree/0.x/src/Trigger/TriggerScheduledJobsJob.php>`__:
