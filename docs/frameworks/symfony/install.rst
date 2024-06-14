@@ -78,7 +78,7 @@ You can have only one storage for your ``JobExecution``, and you have
 several options:
 
 * ``filesystem`` will create a file for each ``JobExecution`` in
-``%kernel.project_dir%/var/batch/{execution.jobName}/{execution.id}.json``
+  ``%kernel.project_dir%/var/batch/{execution.jobName}/{execution.id}.json``
 * ``dbal`` will create a row in a table for each ``JobExecution``
 * ``service`` will use a service you have defined in your application
 
