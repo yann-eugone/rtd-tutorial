@@ -58,21 +58,21 @@ What types of launcher exists ?
 
 **Built-in launchers:**
 
-* :doc:`SimpleJobLauncher <https://github.com/yokai-php/batch/tree/0.x/src/Launcher/SimpleJobLauncher.php>`
+* `SimpleJobLauncher <https://github.com/yokai-php/batch/tree/0.x/src/Launcher/SimpleJobLauncher.php>`__:
   execute the job directly in the same PHP process.
 
 **Launchers from bridges:**
 
-* From :doc:``symfony/console`` bridge:
-  * `RunCommandJobLauncher <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/RunCommandJobLauncher.php>`
+* From ``symfony/console`` bridge:
+  * `RunCommandJobLauncher <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/RunCommandJobLauncher.php>`__:
     execute the job via an asynchronous symfony command.
-* From :doc:``symfony/messenger`` bridge:
-  * `DispatchMessageJobLauncher <https://github.com/yokai-php/batch-symfony-messenger/blob/0.x/src/DispatchMessageJobLauncher.php>`
+* From ``symfony/messenger`` bridge:
+  * `DispatchMessageJobLauncher <https://github.com/yokai-php/batch-symfony-messenger/blob/0.x/src/DispatchMessageJobLauncher.php>`__:
     execute the job via a symfony message dispatch.
 
 **Launchers for testing purpose:**
 
-* :doc:`BufferingJobLauncher <https://github.com/yokai-php/batch/tree/0.x/src/Test/Launcher/BufferingJobLauncher.php>`
+* `BufferingJobLauncher <https://github.com/yokai-php/batch/tree/0.x/src/Test/Launcher/BufferingJobLauncher.php>`__:
   do not execute job, but store execution in a private var that can be accessed afterwards in your tests.
 
 .. seealso::

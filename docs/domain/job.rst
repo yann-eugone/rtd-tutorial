@@ -30,28 +30,28 @@ How to create a job ?
    }
 
 The only requirement is implementing
-`JobInterface <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobInterface.php>:doc:`__,
+`JobInterface <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobInterface.php>`__,
 
 What types of job exists ?
 --------------------------
 
 **Built-in jobs:**
 
-* `AbstractDecoratedJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/AbstractDecoratedJob.php>` a job
+* `AbstractDecoratedJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/AbstractDecoratedJob.php>`__: a job
   that is designed to be extended, helps job construction.
-* :doc:`ItemJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/Item/ItemJob.php>` ETL like, batch processing
-  job (`documentation </domain/item-job>:doc:`__).
-* `JobWithChildJobs <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobWithChildJobs.php>` a job that
+* `ItemJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/Item/ItemJob.php>`__: ETL like, batch processing
+  job (`documentation </domain/item-job>`__).
+* `JobWithChildJobs <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobWithChildJobs.php>`__: a job that
   trigger other jobs.
-* :doc:`TriggerScheduledJobsJob <https://github.com/yokai-php/batch/tree/0.x/src/Trigger/TriggerScheduledJobsJob.php>`
+* `TriggerScheduledJobsJob <https://github.com/yokai-php/batch/tree/0.x/src/Trigger/TriggerScheduledJobsJob.php>`__:
   a job that trigger other jobs when schedule is due (todo documentation).
 
 **Jobs from bridges:**
 
-* From :doc:``league/flysystem`` bridge:
+* From ``league/flysystem`` bridge:
   * `CopyFilesJob https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/CopyFilesJob.php>`__:
     copy files from one filesystem to another.
-  * `MoveFilesJob <https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/MoveFilesJob.php>`
+  * `MoveFilesJob <https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/MoveFilesJob.php>`__:
     move files from one filesystem to another.
 
 .. seealso::

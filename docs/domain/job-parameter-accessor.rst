@@ -34,32 +34,32 @@ What types of parameter accessors exists ?
 ------------------------------------------
 
 **Built-in parameter accessors:**
-* :doc:`ChainParameterAccessor.php <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ChainParameterAccessor.php>`
+* `ChainParameterAccessor.php <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ChainParameterAccessor.php>`__:
   try multiple parameter accessors, the first that is not failing is used.
-* :doc:`ClosestJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ClosestJobExecutionAccessor.php>`
+* `ClosestJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ClosestJobExecutionAccessor.php>`__:
   try another parameter accessor on each job execution in hierarchy, until not failed.
-* :doc:`DefaultParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/DefaultParameterAccessor.php>`
+* `DefaultParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/DefaultParameterAccessor.php>`__:
   try accessing parameter using another parameter accessor, use default value if failed.
-* :doc:`JobExecutionParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/JobExecutionParameterAccessor.php>`
+* `JobExecutionParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/JobExecutionParameterAccessor.php>`__:
   extract value from job execution’s
-`parameters <https://github.com/yokai-php/batch/blob/0.x/src/src/JobParameters.php>:doc:`__.
-* `JobExecutionSummaryAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/JobExecutionSummaryAccessor.php>`
-  extract value from job execution’s `summary <https://github.com/yokai-php/batch/blob/0.x/src/src/Summary.php>:doc:`__.
-* `ParentJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ParentJobExecutionAccessor.php>`
+`parameters <https://github.com/yokai-php/batch/blob/0.x/src/src/JobParameters.php>`__.
+* `JobExecutionSummaryAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/JobExecutionSummaryAccessor.php>`__:
+  extract value from job execution’s `summary <https://github.com/yokai-php/batch/blob/0.x/src/src/Summary.php>`__.
+* `ParentJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ParentJobExecutionAccessor.php>`__:
   use another parameter accessor on job execution’s parent execution.
-* :doc:`ReplaceWithVariablesParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ReplaceWithVariablesParameterAccessor.php>`
+* `ReplaceWithVariablesParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ReplaceWithVariablesParameterAccessor.php>`__:
   use another parameter accessor to get string value, and replace variables before returning.
-* :doc:`RootJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/RootJobExecutionAccessor.php>`
+* `RootJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/RootJobExecutionAccessor.php>`__:
   use another parameter accessor on job execution’s root execution.
-* :doc:`SiblingJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/SiblingJobExecutionAccessor.php>`
+* `SiblingJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/SiblingJobExecutionAccessor.php>`__:
   use another parameter accessor on job execution’s sibling execution.
-* :doc:`StaticValueParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/StaticValueParameterAccessor.php>`
+* `StaticValueParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/StaticValueParameterAccessor.php>`__:
   use static value provided at construction.
 
 **Parameter accessors from bridges:**
 
-* From :doc:``symfony/framework-bundle`` bridge:
-  * `ContainerParameterAccessor <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/ContainerParameterAccessor.php>`
+* From ``symfony/framework-bundle`` bridge:
+  * `ContainerParameterAccessor <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/ContainerParameterAccessor.php>`__:
     use a parameter from Symfony’s container.
 
 .. seealso::
