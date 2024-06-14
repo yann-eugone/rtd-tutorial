@@ -4,58 +4,58 @@ What is an item writer ?
 The item writer is used by the item job to load every processed item.
 
 It can be any class implementing
-`ItemWriterInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/ItemWriterInterface.php>`__.
+`ItemWriterInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/ItemWriterInterface.php>:doc:`__.
 
 What types of item writers exists ?
 -----------------------------------
 
-**Built-in item writers:** 
+**Built-in item writers:**
 
-* `JsonLinesWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/Filesystem/JsonLinesWriter.php>`__:
+* `JsonLinesWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/Filesystem/JsonLinesWriter.php>`
   write items as a json string each on a line of a file.
-* `ChainWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/ChainWriter.php>`__:
+* :doc:`ChainWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/ChainWriter.php>`
   write items on multiple item writers.
-* `ConditionalWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/ConditionalWriter.php>`__:
+* :doc:`ConditionalWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/ConditionalWriter.php>`
   will only write items that are matching your conditions.
-* `DispatchEventsWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/DispatchEventsWriter.php>`__:
+* :doc:`DispatchEventsWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/DispatchEventsWriter.php>`
   will dispatch events before and after writing.
-* `LaunchJobForEachItemWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/LaunchJobForEachItemWriter.php>`__:
+* :doc:`LaunchJobForEachItemWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/LaunchJobForEachItemWriter.php>`
   launch another job for each items.
-* `LaunchJobForItemsBatchWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/LaunchJobForItemsBatchWriter.php>`__:
+* :doc:`LaunchJobForItemsBatchWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/LaunchJobForItemsBatchWriter.php>`
   launch another job for each item batches.
-* `NullWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/NullWriter.php>`__:
+* :doc:`NullWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/NullWriter.php>`
   do not write items.
-* `RoutingWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/RoutingWriter.php>`__:
+* :doc:`RoutingWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/RoutingWriter.php>`
   route writing to different writer based on your logic.
-* `SummaryWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/SummaryWriter.php>`__:
+* :doc:`SummaryWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/SummaryWriter.php>`
   write items to a job summary value.
-* `TransformingWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/TransformingWriter.php>`__:
+* :doc:`TransformingWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/TransformingWriter.php>`
   perform items transformation before delegating to another writer.
-* `CallbackWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/CallbackWriter.php>`__:
+* :doc:`CallbackWriter <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/Writer/CallbackWriter.php>`
   delegate items write operations to a closure passed at construction.
 
 **Item writers from bridges:**
 
-* From ``symfony/messenger`` bridge:
-  * `DispatchEachItemAsMessageWriter <https://github.com/yokai-php/batch-symfony-messenger/blob/0.x/src/src/Writer/DispatchEachItemAsMessageWriter.php>`__:
+* From :doc:``symfony/messenger`` bridge:
+  * `DispatchEachItemAsMessageWriter <https://github.com/yokai-php/batch-symfony-messenger/blob/0.x/src/src/Writer/DispatchEachItemAsMessageWriter.php>`
     dispatch each item as a message in a bus.
-* From ``doctrine/dbal`` bridge:
-  * `DoctrineDBALInsertWriter <https://github.com/yokai-php/batch-doctrine-dbal/blob/0.x/src/src/DoctrineDBALInsertWriter.php>`__:
-    write items by inserting in a table via a Doctrine ``Connection``.
-  * `DoctrineDBALUpsertWriter <https://github.com/yokai-php/batch-doctrine-dbal/blob/0.x/src/src/DoctrineDBALUpsertWriter.php>`__:
-    write items by inserting/updating in a table via a Doctrine ``Connection``.
+* From :doc:``doctrine/dbal`` bridge:
+  * `DoctrineDBALInsertWriter <https://github.com/yokai-php/batch-doctrine-dbal/blob/0.x/src/src/DoctrineDBALInsertWriter.php>`
+    write items by inserting in a table via a Doctrine :doc:``Connection``.
+  * `DoctrineDBALUpsertWriter <https://github.com/yokai-php/batch-doctrine-dbal/blob/0.x/src/src/DoctrineDBALUpsertWriter.php>`
+    write items by inserting/updating in a table via a Doctrine :doc:``Connection``.
 * From ``doctrine/persistence`` bridge:
-  * `ObjectWriter <https://github.com/yokai-php/batch-doctrine-persistence/blob/0.x/src/src/ObjectWriter.php>`__:
-    write items to any Doctrine ``ObjectManager``.
+  * `ObjectWriter <https://github.com/yokai-php/batch-doctrine-persistence/blob/0.x/src/src/ObjectWriter.php>`
+    write items to any Doctrine :doc:``ObjectManager``.
 * From ``openspout/openspout`` bridge:
-  * `FlatFileWriter <https://github.com/yokai-php/batch-openspout/blob/0.x/src/src/Writer/FlatFileWriter.php>`__:
+  * `FlatFileWriter <https://github.com/yokai-php/batch-openspout/blob/0.x/src/src/Writer/FlatFileWriter.php>`
     write items to any CSV/ODS/XLSX file.
 
 **Item writers for testing purpose:**
 
-* `InMemoryWriter <https://github.com/yokai-php/batch/blob/0.x/src/Test/Job/Item/Writer/InMemoryWriter.php>`__:
+* :doc:`InMemoryWriter <https://github.com/yokai-php/batch/blob/0.x/src/Test/Job/Item/Writer/InMemoryWriter.php>`
   write in a private var which can be accessed afterward in your tests.
-* `TestDebugWriter <https://github.com/yokai-php/batch/blob/0.x/src/Test/Job/Item/Writer/TestDebugWriter.php>`__:
+* :doc:`TestDebugWriter <https://github.com/yokai-php/batch/blob/0.x/src/Test/Job/Item/Writer/TestDebugWriter.php>`
   dummy item writer that you can use in your unit tests.
 
 .. seealso::
