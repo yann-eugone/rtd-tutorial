@@ -70,3 +70,11 @@ How to create an item job ?
    :doc:`What is a job? </domain/job>`
 
    :doc:`What is a job launcher? </domain/job-launcher>`
+
+.. toctree::
+   :hidden:
+   :caption: Components of an ItemJob
+
+   Item reader </domain/item-job/item-reader>
+   Item processor </domain/item-job/item-processor>
+   Item writer </domain/item-job/item-writer>
