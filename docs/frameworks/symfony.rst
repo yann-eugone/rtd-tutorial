@@ -67,7 +67,7 @@ Your first job
 
 .. seealso::
 
-   :doc:`What is a job? <domain/job>`
+   :doc:`What is a job? </domain/job>`
 
 Triggering the job
 ------------------
