@@ -27,7 +27,6 @@ Then you will have to route the message to this async transport you created, lik
 You will end with something like:
 
 .. code:: yaml
-
    # config/packages/messenger.yaml
    framework:
        messenger:
@@ -37,5 +36,4 @@ You will end with something like:
                'Yokai\Batch\Bridge\Symfony\Messenger\LaunchJobMessage':  async
 
 .. seealso::
-
    | :doc:`What is a job launcher? </domain/job-launcher>`

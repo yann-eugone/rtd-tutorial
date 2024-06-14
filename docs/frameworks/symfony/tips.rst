@@ -9,7 +9,6 @@ Use the batch logger
   by naming your variable as ``$yokaiBatchLogger``
 
 .. code:: php
-
    <?php
 
    namespace App;
@@ -30,5 +29,4 @@ Use the batch logger
    }
 
 .. seealso::
-
    | :doc:`What is the job execution? </domain/job-execution>`

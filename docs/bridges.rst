@@ -8,7 +8,6 @@ Bridges
 Here is the complete list of what to expect:
 
 .. toctree::
-
    Doctrine DBAL </bridges/doctrine-dbal>
    Doctrine ORM </bridges/doctrine-orm>
    Doctrine Persistence </bridges/doctrine-persistence>

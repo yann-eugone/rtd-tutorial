@@ -19,7 +19,6 @@ Job as a service
 | We will add a tag to every found class in ``src/`` that implements ``Yokai\Batch\Job\JobInterface``:
 
 .. code:: yaml
-
    # config/services.yaml
    services:
      _defaults:
@@ -36,7 +35,6 @@ Your first job
 | But keep in mind you can register your jobs with any other format of your choice.
 
 .. code:: php
-
    <?php
 
    namespace App\NamespaceOfYourChoice;
@@ -58,14 +56,12 @@ Your first job
    }
 
 .. hint::
-
    | When registering jobs with dedicated class, you can use the
      `JobWithStaticNameInterface <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/JobWithStaticNameInterface.php>`__
      interface to be able to specify the job name of your service.
    | Otherwise, the service id will be used, and in that case, the service id is the FQCN.
 
 .. seealso::
-
    | :doc:`What is a job? </domain/job>`
 
 Triggering the job
@@ -74,7 +70,6 @@ Triggering the job
 Then the job will be triggered with its name (or service id when notc specified):
 
 .. code:: php
-
    <?php
 
    namespace App\MyNamespace;

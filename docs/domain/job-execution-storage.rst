@@ -37,7 +37,6 @@ Depending on which storage you decided to use, you may also be able to:
   `QueryableJobExecutionStorageInterface <https://github.com/yokai-php/batch/tree/0.x/src/Storage/QueryableJobExecutionStorageInterface.php>`__:
 
 .. warning::
-
    Sometimes the storage may implement these interfaces,
    but due to the way executions are stored, it might not be recommended heavily rely on these extra methods.
 

@@ -14,7 +14,6 @@ Installation
 For the UI to be enabled, it is required that you install some dependencies:
 
 .. code:: shell
-
    composer require symfony/translation symfony/twig-bundle
 
 Configuration
@@ -23,7 +22,6 @@ Configuration
 The UI is disabled by default, you must enable it explicitly:
 
 .. code:: yaml
-
    # config/packages/yokai_batch.yaml
    yokai_batch:
      ui:
@@ -32,7 +30,6 @@ The UI is disabled by default, you must enable it explicitly:
 You will also need to import bundle routes:
 
 .. code:: yaml
-
    # config/routes/yokai_batch.yaml
    _yokai_batch:
      resource: "@YokaiBatchBundle/Resources/routing/ui.xml"
@@ -54,7 +51,6 @@ By default
 You can configure a prefix for all templates:
 
 .. code:: yaml
-
    # config/packages/yokai_batch.yaml
    yokai_batch:
      ui:
@@ -62,13 +58,11 @@ You can configure a prefix for all templates:
          prefix: 'batch/job/'
 
 .. note::
-
    With this configuration, we will look for templates like ``batch/job/*.html.twig``.
 
 You can also configure the name of the base template for the root views of that bundle:
 
 .. code:: yaml
-
    # config/packages/yokai_batch.yaml
    yokai_batch:
      ui:
@@ -76,13 +70,11 @@ You can also configure the name of the base template for the root views of that 
          base_template: 'layout.html.twig'
 
 .. note::
-
    With this configuration, the template base view will be ``layout.html.twig``.
 
 If these are not enough, or if you need to add more variables to context, you can configure a service:
 
 .. code:: yaml
-
    # config/packages/yokai_batch.yaml
    yokai_batch:
      ui:
@@ -92,7 +84,6 @@ If these are not enough, or if you need to add more variables to context, you ca
 And create the class that will cover the templating:
 
 .. code:: php
-
    <?php
 
    namespace App\Batch;
@@ -113,7 +104,6 @@ And create the class that will cover the templating:
    }
 
 .. note::
-
    You can also use the
    ``Yokai\Batch\Bridge\Symfony\Framework\UserInterface\Templating\ConfigurableTemplating``
    that will cover both prefix and static variables at construction.
@@ -124,7 +114,6 @@ Filtering
 The ``JobExecution`` list includes a filter form, but you will need another optional dependency:
 
 .. code:: shell
-
    composer require symfony/form
 
 Security
@@ -133,13 +122,11 @@ Security
 There is no access control over ``JobExecution`` by default, you will need another optional dependency:
 
 .. code:: shell
-
    composer require symfony/security-bundle
 
 Every security attribute the bundle is using is configurable:
 
 .. code:: yaml
-
    # config/packages/yokai_batch.yaml
    yokai_batch:
      ui:
@@ -154,7 +141,6 @@ Every security attribute the bundle is using is configurable:
 | This is especially useful if you need different access control rules per ``JobExecution``.
 
 .. code:: php
-
    <?php
 
    namespace App\Security;
@@ -194,18 +180,15 @@ Integration with SonataAdminBundle
 .. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/sonata-warnings.png
 
 .. code:: shell
-
    composer require sonata-project/admin-bundle
 
 .. code:: yaml
-
    # config/packages/yokai_batch.yaml
    yokai_batch:
      ui:
        templating: sonata
 
 .. note::
-
    With this configuration, we will look for templates like ``@YokaiBatch/sonata/*.html.twig``.
 
 Customizing templates

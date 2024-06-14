@@ -30,7 +30,6 @@ Batch will allow you to declare and execute jobs.
 The only requirement is implementing `JobInterface <https://github.com/yokai-php/batch/tree/0.x/src/batch/src/Job/JobInterface.php>`__,
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Job\JobInterface;
@@ -45,7 +44,6 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
    }
 
 .. seealso::
-
    | :doc:`What is a job? </domain/job>`
 
 | When you have your job ready, you will want to execute it.
@@ -57,7 +55,6 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
   the ``JobExecution`` status that it had returned to know if the job is already executed.
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Launcher\JobLauncherInterface;
@@ -78,7 +75,6 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
    }
 
 .. seealso::
-
    | :doc:`What is a job launcher? </domain/job-launcher>`
 
 | While the job is being executed, everything that might happen will be remembered in the job execution.
@@ -86,7 +82,6 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 | From time to time during the execution, the object will be stored, so you can access it afterwards.
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Storage\JobExecutionStorageInterface;
@@ -106,12 +101,10 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
    }
 
 .. seealso::
-
    | :doc:`What is the job execution? </domain/job-execution>`
    | :doc:`What is a job execution storage? </domain/job-execution-storage>`
 
 .. hint::
-
    | If you are running this library with Symfony, we got you covered.
    | The HTTP endpoints to manipulate job executions already exists.
    | :doc:`/frameworks/symfony/ui`

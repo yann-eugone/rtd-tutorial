@@ -23,7 +23,6 @@ The item job allows you to split your logic into 3 different component:
 * an :doc:`item writer </domain/item-job/item-writer>`: stands for **Load** in ETL
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Job\Item\ItemJob;
@@ -64,6 +63,5 @@ The item job allows you to split your logic into 3 different component:
    $job = new ItemJob(2, new ItemReader(), new ItemProcessor(), new ItemWriter(), new NullJobExecutionStorage());
 
 .. seealso::
-
    | :doc:`What is a job? </domain/job>`
    | :doc:`What is a job launcher? </domain/job-launcher>`

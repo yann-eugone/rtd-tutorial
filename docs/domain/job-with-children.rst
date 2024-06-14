@@ -4,7 +4,6 @@ Job with children
 todo
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Job\JobExecutor;

@@ -5,7 +5,6 @@ Installation
 ------------
 
 .. code-block:: console
-
    composer require yokai/batch
 
 Vocabulary
@@ -27,7 +26,6 @@ Step by step example
 As a developer, from your application, you want to launch a job
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Launcher\SimpleJobLauncher;
@@ -40,7 +38,6 @@ As a developer, from your application, you want to launch a job
 | This logic have to be implemented in a ``Job``.
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Job\JobInterface;
@@ -62,7 +59,6 @@ As a developer, from your application, you want to launch a job
 The JobLauncher will have to be provided with all the jobs you create in your application, so it can launch any of it.
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Job\JobInterface;
@@ -95,7 +91,6 @@ The JobLauncher will have to be provided with all the jobs you create in your ap
 | You need to a able to store JobExecution, so you can fetch it afterwards.
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Factory\JobExecutionFactory;

@@ -14,7 +14,6 @@ What is the simplest way to launch a job ?
 ------------------------------------------
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Factory\JobExecutionFactory;
@@ -77,6 +76,5 @@ What types of launcher exists ?
   do not execute job, but store execution in a private var that can be accessed afterwards in your tests.
 
 .. seealso::
-
    | :doc:`What is a job? </domain/job>`
    | :doc:`What is a job execution? </domain/job-execution>`

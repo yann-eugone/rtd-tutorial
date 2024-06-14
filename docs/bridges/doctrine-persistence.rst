@@ -14,7 +14,6 @@ Object registry
 Imagine that in an ``ItemJob`` you need to find objects from a database.
 
 .. code:: php
-
    use App\Entity\Product;
    use Doctrine\Persistence\ObjectRepository;
    use Yokai\Batch\Job\Item\ItemProcessorInterface;
@@ -52,7 +51,6 @@ Imagine that in an ``ItemJob`` you need to find objects from a database.
   identities, and query these objects with it instead.
 
 .. code:: diff
-
    use App\Entity\Product;
    -use Doctrine\Persistence\ObjectRepository;
    +use Yokai\Batch\Bridge\Doctrine\Persistence\ObjectRegistry;
@@ -92,5 +90,4 @@ Imagine that in an ``ItemJob`` you need to find objects from a database.
 | Otherwise, the query will be the fastest possible because it will use the object identity.
 
 .. seealso::
-
    | :doc:`What is an item job? </domain/job>`

@@ -11,7 +11,6 @@ The `FlatFileReader <https://github.com/yokai-php/batch-openspout/blob/0.x/src/R
 that will read from CSV/ODS/XLSX file and return each line as an array.
 
 .. code:: php
-
    <?php
 
    use OpenSpout\Reader\CSV\Options as CSVOptions;
@@ -51,7 +50,6 @@ that will read from CSV/ODS/XLSX file and return each line as an array.
    );
 
 .. seealso::
-
    | :doc:`What is an item reader? </domain/item-job/item-reader>`
 
 Item writer
@@ -61,7 +59,6 @@ The `FlatFileWriter <https://github.com/yokai-php/batch-openspout/blob/0.x/src/W
 that will write to CSV/ODS/XLSX file and each item will written its own line.
 
 .. code:: php
-
    <?php
 
    use OpenSpout\Common\Entity\Style\Style;
@@ -103,5 +100,4 @@ that will write to CSV/ODS/XLSX file and each item will written its own line.
    );
 
 .. seealso::
-
    | :doc:`What is an item writer? </domain/item-job/item-writer>`
