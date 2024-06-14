@@ -13,7 +13,7 @@ Vocabulary
 
 | Because when you start with any library it is important to understand
   what are the concepts it manipulates.
-| We recommend that you have a look to these pages before you start :
+| We recommend that you have a look to these pages before you start:
 
 * `Job <domain/job>`__: where you are going to work as a developer.
 * `Job Launcher <domain/job-launcher>`__: The entry point when you need to execute any job.

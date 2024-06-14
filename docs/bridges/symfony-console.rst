@@ -9,12 +9,12 @@ Command
 The `RunJobCommand <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/src/RunJobCommand.php>`__
 can execute any job.
 
-The command accepts 2 arguments :
+The command accepts 2 arguments:
 
 * the job name to execute
 * the job parameters for the ``JobExecution`` (optional)
 
-Examples :
+Examples:
 
 .. code:: console
 

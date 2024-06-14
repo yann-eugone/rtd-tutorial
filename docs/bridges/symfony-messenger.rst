@@ -24,7 +24,7 @@ You first need to configure an async transport, like explained
 Then you will have to route the message to this async transport you created, like explained
 `in Symfony’s doc <https://symfony.com/doc/current/messenger.html#routing-messages-to-a-transport>`__.
 
-You will end with something like :
+You will end with something like:
 
 .. code:: yaml
 

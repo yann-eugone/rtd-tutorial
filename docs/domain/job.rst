@@ -23,7 +23,7 @@ How to create a job ?
 
    class DoStuffJob implements JobInterface
    {
-       public function execute(JobExecution $jobExecution) : void
+       public function execute(JobExecution $jobExecution): void
        {
            // you stuff here
        }

@@ -90,7 +90,7 @@ that will write to CSV/ODS/XLSX file and each item will written its own line.
    );
 
    // Write items to .ods file
-   // That file will contain a header line with : static | header | keys
+   // That file will contain a header line with: static | header | keys
    // Change the sheet name data will be written
    // Change the default style of each cell
    $options = new ODSOptions();

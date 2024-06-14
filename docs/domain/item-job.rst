@@ -13,7 +13,7 @@ This is just a job that has been prepared to batch handle items.
 If you are familiar with the concept of an `ETL <https://en.wikipedia.org/wiki/Extract,_transform,_load>`__,
 this is pretty much the same.
 
-The item job allows you to split your logic into 3 different component :
+The item job allows you to split your logic into 3 different component:
 
 * an `item reader <item-job/item-reader>`__: stands for **Extract** in ETL
 * an `item processor <item-job/item-processor>`__: stands for **Transform** in ETL
