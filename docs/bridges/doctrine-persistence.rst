@@ -93,4 +93,4 @@ Imagine that in an ``ItemJob`` you need to find objects from a database.
 
 .. seealso::
 
-   :doc:`What is an item job? </domain/job>`
+   | :doc:`What is an item job? </domain/job>`

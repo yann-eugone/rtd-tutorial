@@ -38,4 +38,4 @@ You will end with something like:
 
 .. seealso::
 
-   :doc:`What is a job launcher? </domain/job-launcher>`
+   | :doc:`What is a job launcher? </domain/job-launcher>`

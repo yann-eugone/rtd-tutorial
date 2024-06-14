@@ -67,6 +67,5 @@ The item job allows you to split your logic into 3 different component:
 
 .. seealso::
 
-   :doc:`What is a job? </domain/job>`
-
-   :doc:`What is a job launcher? </domain/job-launcher>`
+   | :doc:`What is a job? </domain/job>`
+   | :doc:`What is a job launcher? </domain/job-launcher>`

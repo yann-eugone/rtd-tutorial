@@ -77,6 +77,5 @@ What types of launcher exists ?
 
 .. seealso::
 
-   :doc:`What is a job? </domain/job>`
-
-   :doc:`What is a job execution? </domain/job-execution>`
+   | :doc:`What is a job? </domain/job>`
+   | :doc:`What is a job execution? </domain/job-execution>`

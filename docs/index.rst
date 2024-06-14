@@ -31,7 +31,7 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 
 .. seealso::
 
-   :doc:`What is a job? </domain/job>`
+   | :doc:`What is a job? </domain/job>`
 
 | When you have your job ready, you will want to execute it.
 | This is the responsibility of the job launcher.
@@ -44,7 +44,7 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 
 .. seealso::
 
-   :doc:`What is a job launcher? </domain/job-launcher>`
+   | :doc:`What is a job launcher? </domain/job-launcher>`
 
 | While the job is being executed, everything that might happen will be remembered in the job execution.
 | All the components involved in the job's execution, whenever they access the object, will be able to update it.
@@ -52,9 +52,8 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 
 .. seealso::
 
-   :doc:`What is the job execution? </domain/job-execution>`
-
-   :doc:`What is a job execution storage? </domain/job-execution-storage>`
+   | :doc:`What is the job execution? </domain/job-execution>`
+   | :doc:`What is a job execution storage? </domain/job-execution-storage>`
 
 .. toctree::
    :hidden:
