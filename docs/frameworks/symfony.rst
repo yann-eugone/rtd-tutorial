@@ -6,7 +6,7 @@ Frameworks offers various ways to simplify developer's daily jobs.
 Installation
 ------------
 
-Please refer to the `dedicated documentation <symfony/install>`__.
+Please refer to the ::doc::`dedicated documentation </frameworks/symfony/install>`.
 
 Job as a service
 ----------------
@@ -57,9 +57,8 @@ Your first job
        }
    }
 
-..
+.. hint::
 
-.. note::
    | When registering jobs with dedicated class, you can use the
      `JobWithStaticNameInterface <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/JobWithStaticNameInterface.php>`__
      interface to be able to specify the job name of your service.

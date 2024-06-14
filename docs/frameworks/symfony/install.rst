@@ -32,6 +32,7 @@ able to register these using configuration:
 ..
 
 .. note::
+
    If you do not configure anything here, you will be using the
    `SimpleJobLauncher <https://github.com/yokai-php/batch/blob/0.x/src/src/Launcher/SimpleJobLauncher.php>`__.
 
@@ -94,12 +95,9 @@ several options:
            # service: ~
 
 .. note::
-   The default storage is ``filesystem``, because it only
-   requires a writeable filesystem. But if you already have
-   ``doctrine/dbal`` in your project, it is highly recommended to use it
-   instead. Because querying ``JobExecution`` in a filesystem might be
-   slow, specially if you are planing to add UIs on top.
+   | The default storage is ``filesystem``, because it only requires a writeable filesystem.
+   | But if you already have ``doctrine/dbal`` in your project, it is highly recommended to use it instead.
+   | Because querying ``JobExecution`` in a filesystem might be slow, specially if you are planing to add UIs on top.
 
 .. seealso::
-
    | :doc:`What is a job execution storage? </domain/job-execution-storage>`

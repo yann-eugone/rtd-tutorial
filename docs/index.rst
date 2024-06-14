@@ -110,7 +110,7 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
    | :doc:`What is the job execution? </domain/job-execution>`
    | :doc:`What is a job execution storage? </domain/job-execution-storage>`
 
-.. note::
+.. hint::
 
    | If you are running this library with Symfony, we got you covered.
    | The HTTP endpoints to manipulate job executions already exists.

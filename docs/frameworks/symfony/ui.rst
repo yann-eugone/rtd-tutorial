@@ -61,10 +61,9 @@ You can configure a prefix for all templates:
        templating:
          prefix: 'batch/job/'
 
-..
+.. note::
 
-   With this configuration, we will look for templates like
-   ``batch/job/*.html.twig``.
+   With this configuration, we will look for templates like ``batch/job/*.html.twig``.
 
 You can also configure the name of the base template for the root views of that bundle:
 
@@ -76,10 +75,9 @@ You can also configure the name of the base template for the root views of that 
        templating:
          base_template: 'layout.html.twig'
 
-..
+.. note::
 
-   With this configuration, the template base view will be
-   ``layout.html.twig``.
+   With this configuration, the template base view will be ``layout.html.twig``.
 
 If these are not enough, or if you need to add more variables to context, you can configure a service:
 
@@ -115,6 +113,7 @@ And create the class that will cover the templating:
    }
 
 .. note::
+
    You can also use the
    ``Yokai\Batch\Bridge\Symfony\Framework\UserInterface\Templating\ConfigurableTemplating``
    that will cover both prefix and static variables at construction.
@@ -194,7 +193,6 @@ Integration with SonataAdminBundle
 .. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/sonata-children.png
 .. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/sonata-warnings.png
 
-
 .. code:: shell
 
    composer require sonata-project/admin-bundle
@@ -206,7 +204,7 @@ Integration with SonataAdminBundle
      ui:
        templating: sonata
 
-..
+.. note::
 
    With this configuration, we will look for templates like ``@YokaiBatch/sonata/*.html.twig``.
 
