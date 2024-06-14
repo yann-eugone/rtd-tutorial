@@ -42,4 +42,4 @@ What types of item processors exists ?
 
 .. seealso::
 
-   :doc:`What is an item job?<domain/item-job>`
+   :doc:`What is an item job? </domain/item-job>`

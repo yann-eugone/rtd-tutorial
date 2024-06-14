@@ -50,4 +50,4 @@ What types of item readers exists ?
 
 .. seealso::
 
-   :doc:`What is an item job?<domain/item-job>`
+   :doc:`What is an item job? </domain/item-job>`
