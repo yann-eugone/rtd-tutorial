@@ -114,13 +114,14 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
    :caption: Documentation
 
    Getting Started </getting-started>
-   What is a Job?</domain/job>
-   How to launch a Job?</domain/job-launcher>
-   How to implement a batch processing Job?</domain/item-job>
-   What is the JobExecution?</domain/job-execution>
-   Where are stored my JobExecution?</domain/job-execution-storage>
-   Can jobs run other jobs?</domain/job-with-children>
-   How jobs can access parameters?</domain/job-parameter-accessor>
+   What is a Job? </domain/job>
+   How to launch a Job? </domain/job-launcher>
+   How to implement a batch processing Job? </domain/item-job>
+   What is the JobExecution? </domain/job-execution>
+   Where are stored my JobExecution? </domain/job-execution-storage>
+   Can jobs run other jobs? </domain/job-with-children>
+   How jobs can access parameters? </domain/job-parameter-accessor>
+   Provide execution context to components</domain/aware-interfaces>
 
 .. toctree::
    :hidden:
