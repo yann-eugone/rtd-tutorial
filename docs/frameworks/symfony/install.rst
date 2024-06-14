@@ -2,11 +2,9 @@ Install and configure in a Symfony project
 ==========================================
 
 .. code:: console
-
    composer require yokai/batch-symfony-framework
 
 .. code:: php
-
    // config/bundles.php
    return [
        // ...
@@ -20,7 +18,6 @@ You can use many different job launcher in your application, you will be
 able to register these using configuration:
 
 .. code:: yaml
-
    # config/packages/yokai_batch.yaml
    yokai_batch:
        launcher:
@@ -32,7 +29,6 @@ able to register these using configuration:
 ..
 
 .. note::
-
    If you do not configure anything here, you will be using the
    `SimpleJobLauncher <https://github.com/yokai-php/batch/blob/0.x/src/src/Launcher/SimpleJobLauncher.php>`__.
 
@@ -44,7 +40,6 @@ alias will be configured for it. For instance, in the example below, you
 will be able to register all these launchers like this:
 
 .. code:: php
-
    <?php
 
    use Yokai\Batch\Launcher\JobLauncherInterface;
@@ -69,7 +64,6 @@ All ``launchers`` are configured using a DSN, every scheme has it’s own associ
   * ``service``: the id of the service to use (required, an exception will be thrown otherwise)
 
 .. seealso::
-
    | :doc:`What is a job launcher? </domain/job-launcher>`
 
 JobExecution storage
@@ -84,7 +78,6 @@ several options:
 * ``service`` will use a service you have defined in your application
 
 .. code:: yaml
-
    # config/packages/yokai_batch.yaml
    yokai_batch:
        storage:
