@@ -16,8 +16,6 @@ How to create a job ?
 
    <?php
 
-   declare(strict_types=1);
-
    use Yokai\Batch\JobExecution;
    use Yokai\Batch\Job\JobInterface;
 

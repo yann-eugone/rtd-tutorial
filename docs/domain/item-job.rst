@@ -26,8 +26,6 @@ The item job allows you to split your logic into 3 different component:
 
    <?php
 
-   declare(strict_types=1);
-
    use Yokai\Batch\Job\Item\ItemJob;
    use Yokai\Batch\Job\Item\ItemProcessorInterface;
    use Yokai\Batch\Job\Item\ItemReaderInterface;

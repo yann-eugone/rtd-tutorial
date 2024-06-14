@@ -29,6 +29,21 @@ Batch will allow you to declare and execute jobs.
 
 The only requirement is implementing `JobInterface <https://github.com/yokai-php/batch/tree/0.x/src/batch/src/Job/JobInterface.php>`__,
 
+.. code:: php
+
+   <?php
+
+   use Yokai\Batch\Job\JobInterface;
+   use Yokai\Batch\JobExecution;
+
+   class ImportJob implements JobInterface
+   {
+       public function execute(JobExecution $jobExecution): void
+       {
+           // your import logic will be executed here
+       }
+   }
+
 .. seealso::
 
    | :doc:`What is a job? </domain/job>`
@@ -39,8 +54,28 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 | There is multiple implementation of a job launcher across bridges.
 | Because batch can work both synchronously & asynchronously, the job launcher might just schedule job's execution.
 | Thus, when you ask the job launcher to “launch” a job, you have to check
-  the ``JobExecution`` status that it had returned to know if the job is
-  already executed.
+  the ``JobExecution`` status that it had returned to know if the job is already executed.
+
+.. code:: php
+
+   <?php
+
+   use Yokai\Batch\Launcher\JobLauncherInterface;
+
+   class ImportController
+   {
+        public function __construct(
+            private JobLauncherInterface $launcher,
+        ) {
+        }
+
+        public function trigger()
+        {
+            $jobExecution = $this->launcher->launch('import', ['path' => '/path/to/file/to/import']);
+            // now you can look for information in JobExecution
+            // or if execution is asynchronous, redirect user to a UI where he will watch it 🍿
+        }
+   }
 
 .. seealso::
 
@@ -50,10 +85,36 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 | All the components involved in the job's execution, whenever they access the object, will be able to update it.
 | From time to time during the execution, the object will be stored, so you can access it afterwards.
 
+.. code:: php
+
+   <?php
+
+   use Yokai\Batch\Storage\JobExecutionStorageInterface;
+
+   class JobController
+   {
+        public function __construct(
+            private JobExecutionStorageInterface $jobExecutionStorage,
+        ) {
+        }
+
+        public function show(string $jobName, string $id)
+        {
+            $jobExecution = $this->jobExecutionStorage->retrieve($jobName, $id);
+            // here you are, build a fancy UI with live reload for the user to watch the execution 🍿
+        }
+   }
+
 .. seealso::
 
    | :doc:`What is the job execution? </domain/job-execution>`
    | :doc:`What is a job execution storage? </domain/job-execution-storage>`
+
+.. note::
+
+   | If you are running this library with Symfony, we got you covered.
+   | The HTTP endpoints to manipulate job executions already exists.
+   | :doc:`/frameworks/symfony/ui`
 
 .. toctree::
    :hidden:
@@ -78,6 +139,7 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
    :hidden:
    :caption: Bridges
 
+   What are bridges? </bridges>
    Doctrine DBAL </bridges/doctrine-dbal>
    Doctrine ORM </bridges/doctrine-orm>
    Doctrine Persistence </bridges/doctrine-persistence>

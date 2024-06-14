@@ -7,8 +7,6 @@ todo
 
    <?php
 
-   declare(strict_types=1);
-
    use Yokai\Batch\Job\JobExecutor;
    use Yokai\Batch\Job\JobInterface;
    use Yokai\Batch\Job\JobWithChildJobs;

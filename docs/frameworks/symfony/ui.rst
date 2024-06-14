@@ -97,8 +97,6 @@ And create the class that will cover the templating:
 
    <?php
 
-   declare(strict_types=1);
-
    namespace App\Batch;
 
    use Yokai\Batch\Bridge\Symfony\Framework\UserInterface\Templating\TemplatingInterface;
@@ -159,8 +157,6 @@ Every security attribute the bundle is using is configurable:
 .. code:: php
 
    <?php
-
-   declare(strict_types=1);
 
    namespace App\Security;
 

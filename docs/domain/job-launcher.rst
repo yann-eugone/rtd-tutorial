@@ -17,8 +17,6 @@ What is the simplest way to launch a job ?
 
    <?php
 
-   declare(strict_types=1);
-
    use Yokai\Batch\Factory\JobExecutionFactory;
    use Yokai\Batch\Factory\JobExecutionParametersBuilder\NullJobExecutionParametersBuilder;
    use Yokai\Batch\Factory\UniqidJobExecutionIdGenerator;

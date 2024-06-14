@@ -30,8 +30,6 @@ As a developer, from your application, you want to launch a job
 
    <?php
 
-   declare(strict_types=1);
-
    use Yokai\Batch\Launcher\SimpleJobLauncher;
 
    $launcher = new SimpleJobLauncher(...);
@@ -44,8 +42,6 @@ As a developer, from your application, you want to launch a job
 .. code:: php
 
    <?php
-
-   declare(strict_types=1);
 
    use Yokai\Batch\Job\JobInterface;
    use Yokai\Batch\JobExecution;
@@ -68,8 +64,6 @@ The JobLauncher will have to be provided with all the jobs you create in your ap
 .. code:: php
 
    <?php
-
-   declare(strict_types=1);
 
    use Yokai\Batch\Job\JobInterface;
    use Yokai\Batch\JobExecution;
@@ -103,8 +97,6 @@ The JobLauncher will have to be provided with all the jobs you create in your ap
 .. code:: php
 
    <?php
-
-   declare(strict_types=1);
 
    use Yokai\Batch\Factory\JobExecutionFactory;
    use Yokai\Batch\Factory\JobExecutionParametersBuilder\NullJobExecutionParametersBuilder;

@@ -9,8 +9,6 @@ instance to retrieve that value.
 
    <?php
 
-   declare(strict_types=1);
-
    use Yokai\Batch\Job\JobInterface;
    use Yokai\Batch\Job\Parameters\JobParameterAccessorInterface;
    use Yokai\Batch\JobExecution;
