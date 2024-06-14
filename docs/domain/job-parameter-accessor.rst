@@ -59,6 +59,7 @@ What types of parameter accessors exists ?
 **Parameter accessors from bridges:**
 
 * From ``symfony/framework-bundle`` bridge:
+
   * `ContainerParameterAccessor <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/ContainerParameterAccessor.php>`__:
     use a parameter from Symfony’s container.
 

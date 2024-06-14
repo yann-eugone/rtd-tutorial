@@ -49,6 +49,7 @@ What types of job exists ?
 **Jobs from bridges:**
 
 * From ``league/flysystem`` bridge:
+
   * `CopyFilesJob https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/CopyFilesJob.php>`__:
     copy files from one filesystem to another.
   * `MoveFilesJob <https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/MoveFilesJob.php>`__:
@@ -58,4 +59,4 @@ What types of job exists ?
 
    | :doc:`How do I start a job? </domain/job-launcher>`
    | :doc:`How do I build a batch processing job? </domain/item-job>`
-   | :doc:`How do I access parameters of a job? </domain/job-with-children>`
+   | :doc:`How do I access parameters of a job? </domain/job-parameter-accessor>`

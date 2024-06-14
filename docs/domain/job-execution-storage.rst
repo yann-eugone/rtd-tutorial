@@ -54,6 +54,7 @@ What types of storages exists ?
 **Storages from bridges:**
 
 * From ``doctrine/dbal`` bridge:
+
   * `DoctrineDBALJobExecutionStorage <https://github.com/yokai-php/batch-doctrine-dbal/blob/0.x/src/DoctrineDBALJobExecutionStorage.php>`__:
     store job executions to a relational database.
 
