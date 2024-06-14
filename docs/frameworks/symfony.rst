@@ -6,7 +6,7 @@ Frameworks offers various ways to simplify developer's daily jobs.
 Installation
 ------------
 
-Please refer to the ::doc::`dedicated documentation </frameworks/symfony/install>`.
+Please refer to the :doc:`dedicated documentation </frameworks/symfony/install>`.
 
 Job as a service
 ----------------
