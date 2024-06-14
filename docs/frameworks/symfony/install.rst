@@ -69,7 +69,7 @@ All ``launchers`` are configured using a DSN, every scheme has it’s own associ
 
 .. seealso::
 
-   :doc:`What is a job launcher? </domain/job-launcher>`
+   :doc:`What is a job launcher? <domain/job-launcher>`
 
 JobExecution storage
 ~~~~~~~~~~~~~~~~~~~~
@@ -102,4 +102,4 @@ several options:
 
 .. seealso::
 
-   :doc:`What is a job execution storage? </domain/job-execution-storage>`
+   :doc:`What is a job execution storage? <domain/job-execution-storage>`

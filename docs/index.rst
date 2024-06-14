@@ -31,7 +31,7 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 
 .. seealso::
 
-   :doc:`What is a job? </domain/job>`
+   :doc:`What is a job? <domain/job>`
 
 | When you have your job ready, you will want to execute it.
 | This is the responsibility of the job launcher.
@@ -44,7 +44,7 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 
 .. seealso::
 
-   :doc:`What is a job launcher? </domain/job-launcher>`
+   :doc:`What is a job launcher? <domain/job-launcher>`
 
 | While the job is being executed, everything that might happen will be remembered in the job execution.
 | All the components involved in the job's execution, whenever they access the object, will be able to update it.
@@ -52,15 +52,15 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 
 .. seealso::
 
-   :doc:`What is the job execution? </domain/job-execution>`
+   :doc:`What is the job execution? <domain/job-execution>`
 
-   :doc:`What is a job execution storage? </domain/job-execution-storage>`
+   :doc:`What is a job execution storage? <domain/job-execution-storage>`
 
 .. toctree::
    :hidden:
    :caption: Documentation
 
-   Getting Started </getting-started>
+   Getting Started <getting-started>
    What is a Job?</domain/job>
    How to launch a Job?</domain/job-launcher>
    How to implement a batch processing Job?</domain/item-job>
@@ -73,18 +73,18 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
    :hidden:
    :caption: Frameworks
 
-   Symfony </frameworks/symfony>
+   Symfony <frameworks/symfony>
 
 .. toctree::
    :hidden:
    :caption: Bridges
 
-   Doctrine DBAL </bridges/doctrine-dbal>
-   Doctrine ORM </bridges/doctrine-orm>
-   Doctrine Persistence </bridges/doctrine-persistence>
-   Flysystem </bridges/league-flysystem>
-   OpenSpout </bridges/openspout>
-   Symfony Console </bridges/symfony-console>
-   Symfony Messenger </bridges/symfony-messenger>
-   Symfony Serializer </bridges/symfony-serializer>
-   Symfony Validator </bridges/symfony-validator>
+   Doctrine DBAL <bridges/doctrine-dbal>
+   Doctrine ORM <bridges/doctrine-orm>
+   Doctrine Persistence <bridges/doctrine-persistence>
+   Flysystem <bridges/league-flysystem>
+   OpenSpout <bridges/openspout>
+   Symfony Console <bridges/symfony-console>
+   Symfony Messenger <bridges/symfony-messenger>
+   Symfony Serializer <bridges/symfony-serializer>
+   Symfony Validator <bridges/symfony-validator>
