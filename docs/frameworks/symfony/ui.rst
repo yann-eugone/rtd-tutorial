@@ -3,10 +3,10 @@ User Interface
 
 The package is shipped with few routes that will allow you and your users, to watch for ``JobExecution``.
 
-.. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/bootstrap4-list.png
-.. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/bootstrap4-details.png
-.. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/bootstrap4-children.png
-.. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/bootstrap4-warnings.png
+.. image:: /_static/images/symfony/ui/bootstrap4-list.png
+.. image:: /_static/images/symfony/ui/bootstrap4-details.png
+.. image:: /_static/images/symfony/ui/bootstrap4-children.png
+.. image:: /_static/images/symfony/ui/bootstrap4-warnings.png
 
 Installation
 ------------
@@ -174,10 +174,10 @@ Integration with SonataAdminBundle
 | The bundle got you covered with a dedicated templating services
   and templates.
 
-.. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/sonata-list.png
-.. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/sonata-details.png
-.. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/sonata-children.png
-.. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/sonata-warnings.png
+.. image:: /_static/images/symfony/ui/sonata-list.png
+.. image:: /_static/images/symfony/ui/sonata-details.png
+.. image:: /_static/images/symfony/ui/sonata-children.png
+.. image:: /_static/images/symfony/ui/sonata-warnings.png
 
 .. code:: shell
    composer require sonata-project/admin-bundle
