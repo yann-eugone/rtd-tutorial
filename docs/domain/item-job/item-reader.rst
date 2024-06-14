@@ -46,7 +46,7 @@ What types of item readers exists ?
 **Item readers for testing purpose:**
 
 * `TestDebugReader <https://github.com/yokai-php/batch/blob/0.x/src/Test/Job/Item/Reader/TestDebugReader.php>`__:
-dummy item reader that you can use in your unit tests.
+  dummy item reader that you can use in your unit tests.
 
 .. seealso::
 

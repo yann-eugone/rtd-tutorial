@@ -30,7 +30,7 @@ How to create a job ?
    }
 
 The only requirement is implementing
-```JobInterface`` <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobInterface.php>`__,
+`JobInterface <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobInterface.php>`__,
 
 What types of job exists ?
 --------------------------

@@ -10,9 +10,8 @@ processing actually starts.
 
 This is just a job that has been prepared to batch handle items.
 
-If you are familiar with the concept of an
-`ETL <https://en.wikipedia.org/wiki/Extract,_transform,_load>`__, this
-is pretty much the same.
+If you are familiar with the concept of an `ETL <https://en.wikipedia.org/wiki/Extract,_transform,_load>`__,
+this is pretty much the same.
 
 The item job allows you to split your logic into 3 different component :
 

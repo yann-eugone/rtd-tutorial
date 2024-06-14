@@ -1,8 +1,8 @@
 Bridge with ``openspout/openspout``
 ===================================
 
-The ``OpenSpout`` library allows to read and write with the same API from CSV/ODS/XLSX files.
-The bridge will allow you to do the same, within an ``ItemJob``.
+| The ``OpenSpout`` library allows to read and write with the same API from CSV/ODS/XLSX files.
+| The bridge will allow you to do the same, within an ``ItemJob``.
 
 Item reader
 -----------
@@ -58,8 +58,7 @@ Item writer
 -----------
 
 The `FlatFileWriter <https://github.com/yokai-php/batch-openspout/blob/0.x/src/Writer/FlatFileWriter.php>`__ is a writer
-that will write to CSV/ODS/XLSX file and each item will written its own
-line.
+that will write to CSV/ODS/XLSX file and each item will written its own line.
 
 .. code:: php
 

@@ -6,11 +6,9 @@ What is a job launcher ?
 
 The job launcher is responsible for executing/scheduling every jobs.
 
-Yeah, executing OR scheduling. There is multiple implementation of a job
-launcher across bridges. Job’s execution might be asynchronous, and
-thus, when you ask the job launcher to “launch” a job, you have to check
-the ``JobExecution`` status that it had returned to know if the job is
-already executed.
+| Yeah, executing OR scheduling. There is multiple implementation of a job launcher across bridges.
+| Job’s execution might be asynchronous, and thus, when you ask the job launcher to “launch” a job,
+  you have to check the ``JobExecution`` status that it had returned to know if the job is already executed.
 
 What is the simplest way to launch a job ?
 ------------------------------------------

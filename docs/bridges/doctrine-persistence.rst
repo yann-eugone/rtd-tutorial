@@ -43,13 +43,13 @@ Imagine that in an ``ItemJob`` you need to find objects from a database.
        }
    }
 
-The problem here is that every time you will call ``findOneBy``, you
-will have to query the database. The object might already be in
-Doctrine’s memory, so it won’t be hydrated twice, but the query will be
-done every time.
+| The problem here is that every time you will call ``findOneBy``, you
+  will have to query the database. The object might already be in
+| Doctrine’s memory, so it won’t be hydrated twice, but the query will be
+  done every time.
 
-The role of the ``ObjectRegistry`` is to remember found objects
-identities, and query these objects with it instead.
+| The role of the ``ObjectRegistry`` is to remember found objects
+  identities, and query these objects with it instead.
 
 .. code:: diff
 
@@ -84,12 +84,12 @@ identities, and query these objects with it instead.
        }
    }
 
-The first time, the query will hit the database, and the object identity
-will be remembered in the registry. Everytime after that, the registry
-will call ``Doctrine\Persistence\ObjectManager::find`` instead. If the
-object is still in Doctrine’s memory, it will be returned directly.
-Otherwise, the query will be the fastest possible because it will use
-the object identity.
+| The first time, the query will hit the database, and the object identity
+  will be remembered in the registry.
+| Everytime after that, the registry will call
+  ``Doctrine\Persistence\ObjectManager::find`` instead.
+| If the object is still in Doctrine’s memory, it will be returned directly.
+| Otherwise, the query will be the fastest possible because it will use the object identity.
 
 .. seealso::
 

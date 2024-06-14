@@ -33,7 +33,7 @@ able to register these using configuration:
 
 .. note::
    If you do not configure anything here, you will be using the
-   ```SimpleJobLauncher`` <https://github.com/yokai-php/batch/blob/0.x/src/src/Launcher/SimpleJobLauncher.php>`__.
+   `SimpleJobLauncher <https://github.com/yokai-php/batch/blob/0.x/src/src/Launcher/SimpleJobLauncher.php>`__.
 
 The ``default`` job launcher, must reference a launcher name, defined in
 the ``launchers`` list. The ``default`` job launcher will be the
@@ -60,9 +60,9 @@ will be able to register all these launchers like this:
 
 All ``launchers`` are configured using a DSN, every scheme has it’s own associated factory:
 
-* ``simple://simple``: a ```SimpleJobLauncher`` <https://github.com/yokai-php/batch/blob/0.x/src/src/Launcher/SimpleJobLauncher.php>`__, no configuration allowed
-* ``messenger://messenger``: a ```DispatchMessageJobLauncher`` <https://github.com/yokai-php/batch-symfony-messenger/blob/0.x/src/src/DispatchMessageJobLauncher.php>`__, no configuration allowed
-* ``console://console``: a ```RunCommandJobLauncher`` <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/src/RunCommandJobLauncher.php>`__, configurable options:
+* ``simple://simple``: a `SimpleJobLauncher <https://github.com/yokai-php/batch/blob/0.x/src/src/Launcher/SimpleJobLauncher.php>`__, no configuration allowed
+* ``messenger://messenger``: a `DispatchMessageJobLauncher <https://github.com/yokai-php/batch-symfony-messenger/blob/0.x/src/src/DispatchMessageJobLauncher.php>`__, no configuration allowed
+* ``console://console``: a `RunCommandJobLauncher <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/src/RunCommandJobLauncher.php>`__, configurable options:
   * ``log``: the filename where command output will be redirected (defaults to ``batch_execute.log``)
 * ``service://service``: pointing to a service of your choice, configurable options:
   * ``service``: the id of the service to use (required, an exception will be thrown otherwise)

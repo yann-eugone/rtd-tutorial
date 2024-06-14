@@ -38,7 +38,7 @@ What types of item processors exists ?
 **Item processors for testing purpose:**
 
 * `TestDebugProcessor <https://github.com/yokai-php/batch/blob/0.x/src/Test/Job/Item/Processor/TestDebugProcessor.php>`__:
-dummy item processor that you can use in your unit tests.
+  dummy item processor that you can use in your unit tests.
 
 .. seealso::
 

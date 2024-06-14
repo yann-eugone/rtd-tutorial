@@ -11,11 +11,9 @@ Installation
 Vocabulary
 ----------
 
-Because when you start with any library it is important to understand
-what are the concepts introduced in it.
-
-This is highly recommended that you read this entire page before
-starting to work with this library.
+| Because when you start with any library it is important to understand
+  what are the concepts it manipulates.
+| We recommend that you have a look to these pages before you start :
 
 * `Job <domain/job>`__: where you are going to work as a developer.
 * `Job Launcher <domain/job-launcher>`__: The entry point when you need to execute any job.
@@ -40,8 +38,8 @@ As a developer, from your application, you want to launch a job
 
    $launcher->launch('import', ['path' => '/path/to/file/to/import']);
 
-This job will be executed by the ``JobLauncher``, and at some point in the call graph, your code will run.
-This logic have to be implemented in a `Job`
+| This job will be executed by the ``JobLauncher``, and at some point in the call graph, your code will run.
+| This logic have to be implemented in a ``Job``.
 
 .. code:: php
 
@@ -65,7 +63,7 @@ This logic have to be implemented in a `Job`
 
    $launcher->launch('import', ['path' => '/path/to/file/to/import']);
 
-The JobLauncher will have to be provided with all the jobs you create in your application, so it can launch any of it
+The JobLauncher will have to be provided with all the jobs you create in your application, so it can launch any of it.
 
 .. code:: php
 
@@ -99,8 +97,8 @@ The JobLauncher will have to be provided with all the jobs you create in your ap
 
    $launcher->launch('import', ['path' => '/path/to/file/to/import']);
 
-But now, what if the job fails, or what if you wish to analyse what the job produced.
-You need to a able to store JobExecution, so you can fetch it afterwards
+| But now, what if the job fails, or what if you wish to analyse what the job produced.
+| You need to a able to store JobExecution, so you can fetch it afterwards.
 
 .. code:: php
 

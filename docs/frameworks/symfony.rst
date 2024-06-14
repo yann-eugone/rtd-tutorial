@@ -11,13 +11,12 @@ Please refer to the `dedicated documentation <symfony/install>`__.
 Job as a service
 ----------------
 
-We need to provide the library with all the implemented jobs we have.
-We will be using Symfony's dependency injection system for that.
+| We need to provide the library with all the implemented jobs we have.
+| We will be using Symfony's dependency injection system for that.
 
-As Symfony supports registering all classes in ``src/`` as a service, we
-can leverage this behaviour to register all jobs in ``src/``. We will
-add a tag to every found class in ``src/`` that implements
-``Yokai\Batch\Job\JobInterface``:
+| As Symfony supports registering all classes in ``src/`` as a service, we
+  can leverage this behaviour to register all jobs in ``src/``.
+| We will add a tag to every found class in ``src/`` that implements ``Yokai\Batch\Job\JobInterface``:
 
 .. code:: yaml
 
@@ -31,12 +30,10 @@ add a tag to every found class in ``src/`` that implements
 Your first job
 --------------
 
-In a Symfony project, we will prefer using one class per job, because
-service discovery is so easy to use. But also because it will be very
-far easier to configure your job using PHP than any other format. For
-instance, there is components that uses ``Closure``, has static
-constructors, … But keep in mind you can register your jobs with any
-other format of your choice.
+| In a Symfony project, we will prefer using one class per job, because service discovery is so easy to use.
+| But also because it will be very far easier to configure your job using PHP than any other format.
+| For instance, there is components that uses ``Closure``, has static constructors, ...
+| But keep in mind you can register your jobs with any other format of your choice.
 
 .. code:: php
 
@@ -63,11 +60,10 @@ other format of your choice.
 ..
 
 .. note::
-   When registering jobs with dedicated class, you can use the
-   `JobWithStaticNameInterface <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/JobWithStaticNameInterface.php>`__
-   interface to be able to specify the job name of your service.
-   Otherwise, the service id will be used, and in that case, the service
-   id is the FQCN.
+   | When registering jobs with dedicated class, you can use the
+     `JobWithStaticNameInterface <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/JobWithStaticNameInterface.php>`__
+     interface to be able to specify the job name of your service.
+   | Otherwise, the service id will be used, and in that case, the service id is the FQCN.
 
 .. seealso::
 
@@ -76,8 +72,7 @@ other format of your choice.
 Triggering the job
 ------------------
 
-Then the job will be triggered with its name (or service id when not
-specified):
+Then the job will be triggered with its name (or service id when notc specified):
 
 .. code:: php
 
@@ -100,8 +95,7 @@ specified):
        }
    }
 
-The job launcher that will be injected depends on the packages you have
-installed, order matter:
+The job launcher that will be injected depends on the packages you have installed, order matter:
 
 * if ``yokai/batch-symfony-messenger`` is installed, you will receive a
   ``Yokai\Batch\Bridge\Symfony\Messenger\DispatchMessageJobLauncher``

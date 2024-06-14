@@ -13,19 +13,19 @@ With this library, you will be able to:
 What is Batch ?
 ---------------
 
-The Batch library solves all your massive data processing problems.
-It can also be seen as an ETL.
-It can works both synchronously & asynchronously.
-It will store execution results, so you can access it afterwards.
+| The Batch library solves all your massive data processing problems.
+| It can also be seen as an ETL.
+| It can works both synchronously & asynchronously.
+| It will store execution results, so you can access it afterwards.
 
 How it works ?
 --------------
 
 Batch will allow you to declare and execute jobs.
 
-A job is the class that is responsible for **what** your code is doing.
-This is the class you will have to create (or reuse), as it contains the
-business logic required for what you wish to achieve.
+| A job is the class that is responsible for **what** your code is doing.
+| This is the class you will have to create (or reuse), as it contains the
+  business logic required for what you wish to achieve.
 
 The only requirement is implementing `JobInterface <https://github.com/yokai-php/batch/tree/0.x/src/batch/src/Job/JobInterface.php>`__,
 
@@ -33,22 +33,22 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 
    :doc:`What is a job? </domain/job>`
 
-When you have your job ready, you will want to execute it.
-This is the responsibility of the job launcher.
+| When you have your job ready, you will want to execute it.
+| This is the responsibility of the job launcher.
 
-There is multiple implementation of a job launcher across bridges.
-Necause batch can work both synchronously & asynchronously, the job launcher might just schedule job's execution.
-Thus, when you ask the job launcher to “launch” a job, you have to check
-the ``JobExecution`` status that it had returned to know if the job is
-already executed.
+| There is multiple implementation of a job launcher across bridges.
+| Because batch can work both synchronously & asynchronously, the job launcher might just schedule job's execution.
+| Thus, when you ask the job launcher to “launch” a job, you have to check
+  the ``JobExecution`` status that it had returned to know if the job is
+  already executed.
 
 .. seealso::
 
    :doc:`What is a job launcher? </domain/job-launcher>`
 
-While the job is being executed, everything that might happen will be remembered in the job execution.
-All the components involved in the job's execution, whenever they access the object, will be able to update it.
-From time to time during the execution, the object will be stored, so you can access it afterwards.
+| While the job is being executed, everything that might happen will be remembered in the job execution.
+| All the components involved in the job's execution, whenever they access the object, will be able to update it.
+| From time to time during the execution, the object will be stored, so you can access it afterwards.
 
 .. seealso::
 

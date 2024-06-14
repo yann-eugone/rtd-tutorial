@@ -1,8 +1,7 @@
 User Interface
 ==============
 
-The package is shipped with few routes that will allow you and your
-users, to watch for ``JobExecution``.
+The package is shipped with few routes that will allow you and your users, to watch for ``JobExecution``.
 
 .. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/bootstrap4-list.png
 .. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/bootstrap4-details.png
@@ -12,8 +11,7 @@ users, to watch for ``JobExecution``.
 Installation
 ------------
 
-For the UI to be enabled, it is required that you install some
-dependencies:
+For the UI to be enabled, it is required that you install some dependencies:
 
 .. code:: shell
 
@@ -22,7 +20,7 @@ dependencies:
 Configuration
 -------------
 
-The UI is disabled by default, you must enable it explicitely:
+The UI is disabled by default, you must enable it explicitly:
 
 .. code:: yaml
 
@@ -42,11 +40,11 @@ You will also need to import bundle routes:
 Templating
 ~~~~~~~~~~
 
-The templating service is used by the
-`JobController <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/UserInterface/Controller/JobController.php>`__
-to render its templates. It’s a wrapper around
-`Twig <https://twig.symfony.com/>`__, for you to control templates used,
-and variables passed.
+| The templating service is used by the
+  `JobController <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/UserInterface/Controller/JobController.php>`__
+  to render its templates.
+| It’s a wrapper around `Twig <https://twig.symfony.com/>`__, for you to control templates used,
+  and variables passed.
 
 By default
 
@@ -68,8 +66,7 @@ You can configure a prefix for all templates:
    With this configuration, we will look for templates like
    ``batch/job/*.html.twig``.
 
-You can also configure the name of the base template for the root views
-of that bundle:
+You can also configure the name of the base template for the root views of that bundle:
 
 .. code:: yaml
 
@@ -84,8 +81,7 @@ of that bundle:
    With this configuration, the template base view will be
    ``layout.html.twig``.
 
-If these are not enough, or if you need to add more variables to
-context, you can configure a service:
+If these are not enough, or if you need to add more variables to context, you can configure a service:
 
 .. code:: yaml
 
@@ -120,8 +116,6 @@ And create the class that will cover the templating:
        }
    }
 
-..
-
 .. note::
    You can also use the
    ``Yokai\Batch\Bridge\Symfony\Framework\UserInterface\Templating\ConfigurableTemplating``
@@ -130,8 +124,7 @@ And create the class that will cover the templating:
 Filtering
 ~~~~~~~~~
 
-The ``JobExecution`` list includes a filter form, but you will need
-another optional dependency:
+The ``JobExecution`` list includes a filter form, but you will need another optional dependency:
 
 .. code:: shell
 
@@ -140,8 +133,7 @@ another optional dependency:
 Security
 ~~~~~~~~
 
-There is no access control over ``JobExecution`` by default, you will
-need another optional dependency:
+There is no access control over ``JobExecution`` by default, you will need another optional dependency:
 
 .. code:: shell
 
@@ -161,9 +153,8 @@ Every security attribute the bundle is using is configurable:
            traces: ROLE_JOB_TRACES # defaults to IS_AUTHENTICATED
            logs: ROLE_JOB_LOGS # defaults to IS_AUTHENTICATED
 
-Optionally, you can register a voter for these attributes. This is
-especially useful if you need different access control rules per
-``JobExecution``.
+| Optionally, you can register a voter for these attributes.
+| This is especially useful if you need different access control rules per ``JobExecution``.
 
 .. code:: php
 
@@ -196,10 +187,11 @@ especially useful if you need different access control rules per
 Integration with SonataAdminBundle
 ----------------------------------
 
-If you are on a
-`SonataAdmin <https://symfony.com/bundles/SonataAdminBundle/current/index.html>`__
-project. The bundle got you covered with a dedicated templating services
-and templates.
+| If you are on a
+  `SonataAdmin <https://symfony.com/bundles/SonataAdminBundle/current/index.html>`__
+  project.
+| The bundle got you covered with a dedicated templating services
+  and templates.
 
 .. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/sonata-list.png
 .. image:: https://github.com/yokai-php/batch-src/raw/0.x/docs/batch-symfony-framework/images/sonata-details.png
@@ -220,21 +212,19 @@ and templates.
 
 ..
 
-   With this configuration, we will look for templates like
-   ``@YokaiBatch/sonata/*.html.twig``.
+   With this configuration, we will look for templates like ``@YokaiBatch/sonata/*.html.twig``.
 
 Customizing templates
 ---------------------
 
-You can override templates like `described it Symfony’s
-documentation <https://symfony.com/doc/current/bundles/override.html>`__.
-Examples:
+| You can override templates like
+  `described it Symfony’s documentation <https://symfony.com/doc/current/bundles/override.html>`__.
+| Examples:
 
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/list.html.twig``
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/_parameters.html.twig``
 
-But you can also register job name dedicated templates if you need some
-specific view for one of your jobs:
+But you can also register job name dedicated templates if you need some specific view for one of your jobs:
 
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_children-executions.html.twig``
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_failures.html.twig``
