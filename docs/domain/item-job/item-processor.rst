@@ -27,7 +27,7 @@ What types of item processors exists ?
 **Item processors from bridges:**
 
 * From ``symfony/validator`` bridge:
-  * `SkipInvalidItemProcessor () <https://github.com/yokai-php/batch-symfony-validator/blob/0.x/src/src/SkipInvalidItemProcessor.php>`__:
+  * `SkipInvalidItemProcessor <https://github.com/yokai-php/batch-symfony-validator/blob/0.x/src/src/SkipInvalidItemProcessor.php>`__:
     validate item and throw exception if invalid that will cause item to be skipped.
 * From ``symfony/serializer`` bridge:
   * `DenormalizeItemProcessor <https://github.com/yokai-php/batch-symfony-serializer/blob/0.x/src/src/DenormalizeItemProcessor.php>`__:

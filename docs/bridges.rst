@@ -8,12 +8,12 @@ Bridges
 
 .. toctree::
 
-   Doctrine DBAL <bridges/doctrine-dbal>
-   Doctrine ORM <bridges/doctrine-orm>
-   Doctrine Persistence <bridges/doctrine-persistence>
-   Flysystem <bridges/league-flysystem>
-   OpenSpout <bridges/openspout>
-   Symfony Console <bridges/symfony-console>
-   Symfony Messenger <bridges/symfony-messenger>
-   Symfony Serializer <bridges/symfony-serializer>
-   Symfony Validator <bridges/symfony-validator>
+   Doctrine DBAL </bridges/doctrine-dbal>
+   Doctrine ORM </bridges/doctrine-orm>
+   Doctrine Persistence </bridges/doctrine-persistence>
+   Flysystem </bridges/league-flysystem>
+   OpenSpout </bridges/openspout>
+   Symfony Console </bridges/symfony-console>
+   Symfony Messenger </bridges/symfony-messenger>
+   Symfony Serializer </bridges/symfony-serializer>
+   Symfony Validator </bridges/symfony-validator>

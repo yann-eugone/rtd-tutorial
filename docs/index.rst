@@ -60,31 +60,31 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
    :hidden:
    :caption: Documentation
 
-   Getting Started <getting-started>
-   What is a Job?<domain/job>
-   How to launch a Job?<domain/job-launcher>
-   How to implement a batch processing Job?<domain/item-job>
-   What is the JobExecution?<domain/job-execution>
-   Where are stored my JobExecution?<domain/job-execution-storage>
-   Can jobs run other jobs?<domain/job-with-children>
-   How jobs can access parameters?<domain/job-parameter-accessor>
+   Getting Started </getting-started>
+   What is a Job?</domain/job>
+   How to launch a Job?</domain/job-launcher>
+   How to implement a batch processing Job?</domain/item-job>
+   What is the JobExecution?</domain/job-execution>
+   Where are stored my JobExecution?</domain/job-execution-storage>
+   Can jobs run other jobs?</domain/job-with-children>
+   How jobs can access parameters?</domain/job-parameter-accessor>
 
 .. toctree::
    :hidden:
    :caption: Frameworks
 
-   Symfony <frameworks/symfony>
+   Symfony </frameworks/symfony>
 
 .. toctree::
    :hidden:
    :caption: Bridges
 
-   Doctrine DBAL <bridges/doctrine-dbal>
-   Doctrine ORM <bridges/doctrine-orm>
-   Doctrine Persistence <bridges/doctrine-persistence>
-   Flysystem <bridges/league-flysystem>
-   OpenSpout <bridges/openspout>
-   Symfony Console <bridges/symfony-console>
-   Symfony Messenger <bridges/symfony-messenger>
-   Symfony Serializer <bridges/symfony-serializer>
-   Symfony Validator <bridges/symfony-validator>
+   Doctrine DBAL </bridges/doctrine-dbal>
+   Doctrine ORM </bridges/doctrine-orm>
+   Doctrine Persistence </bridges/doctrine-persistence>
+   Flysystem </bridges/league-flysystem>
+   OpenSpout </bridges/openspout>
+   Symfony Console </bridges/symfony-console>
+   Symfony Messenger </bridges/symfony-messenger>
+   Symfony Serializer </bridges/symfony-serializer>
+   Symfony Validator </bridges/symfony-validator>
