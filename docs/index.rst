@@ -28,9 +28,10 @@ Core Concepts
 ----------------------------------------
 
 Get familiar with the core concepts:
-- :doc:`/core-concepts/jobs`: Manage and execute your tasks efficiently.
-- :doc:`/core-concepts/job-launcher`: Manage and execute your tasks efficiently.
-- :doc:`/core-concepts/item-job`: Manage and execute your tasks efficiently.
+
+* :doc:`/core-concepts/jobs`: Manage and execute your tasks efficiently.
+* :doc:`/core-concepts/job-launcher`: Manage and execute your tasks efficiently.
+* :doc:`/core-concepts/item-job`: Manage and execute your tasks efficiently.
 
 Tutorials and Examples
 ----------------------------------------
@@ -38,7 +39,8 @@ Tutorials and Examples
 Build your first Job
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Learn how to create and manage your first batch job in **Yokai Batch**. Follow our step-by-step :doc:`/tutorials/first-job`.
+| Learn how to create and manage your first batch job in **Yokai Batch**.
+| Follow our step-by-step :doc:`/tutorials/first-job`.
 
 Real world examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
