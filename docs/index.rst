@@ -29,7 +29,7 @@ Core Concepts
 
 Get familiar with the core concepts:
 
-* :doc:`/core-concepts/jobs`: Manage and execute your tasks efficiently.
+* :doc:`/core-concepts/job`: Manage and execute your tasks efficiently.
 * :doc:`/core-concepts/job-launcher`: Manage and execute your tasks efficiently.
 * :doc:`/core-concepts/item-job`: Manage and execute your tasks efficiently.
 
