@@ -38,7 +38,7 @@ What types of job exists?
 * `AbstractDecoratedJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/AbstractDecoratedJob.php>`__: a job
   that is designed to be extended, helps job construction.
 * `ItemJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/Item/ItemJob.php>`__: ETL like, batch processing
-  job (:doc:`documentation </domain/item-job>`).
+  job (:doc:`documentation </core-concepts/item-job>`).
 * `JobWithChildJobs <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobWithChildJobs.php>`__: a job that
   trigger other jobs.
 * `TriggerScheduledJobsJob <https://github.com/yokai-php/batch/tree/0.x/src/Trigger/TriggerScheduledJobsJob.php>`__:
@@ -54,6 +54,6 @@ What types of job exists?
     move files from one filesystem to another.
 
 .. seealso::
-   | :doc:`How do I start a job? </domain/job-launcher>`
-   | :doc:`How do I build a batch processing job? </domain/item-job>`
-   | :doc:`How do I access parameters of a job? </domain/job-parameter-accessor>`
+   | :doc:`How do I start a job? </core-concepts/job-launcher>`
+   | :doc:`How do I build a batch processing job? </core-concepts/item-job>`
+   | :doc:`How do I access parameters of a job? </core-concepts/job-parameter-accessor>`

@@ -18,9 +18,9 @@ How to create an item job?
 
 The item job allows you to split your logic into 3 different component:
 
-* an :doc:`item reader </domain/item-job/item-reader>`: stands for **Extract** in ETL
-* an :doc:`item processor </domain/item-job/item-processor>`: stands for **Transform** in ETL
-* an :doc:`item writer </domain/item-job/item-writer>`: stands for **Load** in ETL
+* an :doc:`item reader </core-concepts/item-job/item-reader>`: stands for **Extract** in ETL
+* an :doc:`item processor </core-concepts/item-job/item-processor>`: stands for **Transform** in ETL
+* an :doc:`item writer </core-concepts/item-job/item-writer>`: stands for **Load** in ETL
 
 .. code-block:: php
 
@@ -64,5 +64,5 @@ The item job allows you to split your logic into 3 different component:
     $job = new ItemJob(2, new ItemReader(), new ItemProcessor(), new ItemWriter(), new NullJobExecutionStorage());
 
 .. seealso::
-   | :doc:`What is a job? </domain/job>`
-   | :doc:`What is a job launcher? </domain/job-launcher>`
+   | :doc:`What is a job? </core-concepts/job>`
+   | :doc:`What is a job launcher? </core-concepts/job-launcher>`

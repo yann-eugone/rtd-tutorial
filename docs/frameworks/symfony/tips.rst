@@ -30,4 +30,4 @@ Use the batch logger
     }
 
 .. seealso::
-   | :doc:`What is the job execution? </domain/job-execution>`
+   | :doc:`What is the job execution? </core-concepts/job-execution>`

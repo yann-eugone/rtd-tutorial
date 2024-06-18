@@ -62,6 +62,6 @@ What types of parameter accessors exists?
     use a parameter from Symfony’s container.
 
 .. seealso::
-   | :doc:`What is a job? </domain/job>`
-   | :doc:`When does a job execution hierarchy is created? </domain/job-with-children>`
-   | :doc:`What is a job execution? </domain/job-execution>`
+   | :doc:`What is a job? </core-concepts/job>`
+   | :doc:`When does a job execution hierarchy is created? </core-concepts/job-with-children>`
+   | :doc:`What is a job execution? </core-concepts/job-execution>`

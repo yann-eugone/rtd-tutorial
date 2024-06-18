@@ -66,4 +66,4 @@ What types of item writers exists?
   dummy item writer that you can use in your unit tests.
 
 .. seealso::
-   | :doc:`What is an item job? </domain/item-job>`
+   | :doc:`What is an item job? </core-concepts/item-job>`

@@ -14,10 +14,10 @@ Vocabulary
   what are the concepts it manipulates.
 | We recommend that you have a look to these pages before you start:
 
-* :doc:`Job </domain/job>`: where you are going to work as a developer.
-* :doc:`Job Launcher </domain/job-launcher>`: The entry point when you need to execute any job.
-* :doc:`Job Execution </domain/job-execution>`: The representation of a certain execution of certain job.
-* :doc:`Job Execution Storage </domain/job-execution-storage>`: The persistence layer of jobs executions.
+* :doc:`Job </core-concepts/job>`: where you are going to work as a developer.
+* :doc:`Job Launcher </core-concepts/job-launcher>`: The entry point when you need to execute any job.
+* :doc:`Job Execution </core-concepts/job-execution>`: The representation of a certain execution of certain job.
+* :doc:`Job Execution Storage </core-concepts/job-execution-storage>`: The persistence layer of jobs executions.
 
 
 Step by step example

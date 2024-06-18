@@ -37,4 +37,4 @@ You will end with something like:
                 'Yokai\Batch\Bridge\Symfony\Messenger\LaunchJobMessage':  async
 
 .. seealso::
-   | :doc:`What is a job launcher? </domain/job-launcher>`
+   | :doc:`What is a job launcher? </core-concepts/job-launcher>`

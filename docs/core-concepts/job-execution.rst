@@ -5,7 +5,7 @@ What is a Job execution?
 ------------------------
 
 A `JobExecution <https://github.com/yokai-php/batch/tree/0.x/src/JobExecution.php>`__ is the class that holds
-information about one execution of a :doc:`job </domain/job>`.
+information about one execution of a :doc:`job </core-concepts/job>`.
 
 What kind of information does it hold?
 --------------------------------------
@@ -23,5 +23,5 @@ What kind of information does it hold?
 * ``JobExecution::$childExecutions``: Some child execution
 
 .. seealso::
-   | :doc:`How is a job execution created? </domain/job-launcher>`
-   | :doc:`How can I retrieve a job execution afterwards? </domain/job-execution-storage>`
+   | :doc:`How is a job execution created? </core-concepts/job-launcher>`
+   | :doc:`How can I retrieve a job execution afterwards? </core-concepts/job-execution-storage>`

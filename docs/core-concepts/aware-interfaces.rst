@@ -68,4 +68,4 @@ In the library, you will find that :
 You can add this interface to any class, but you are responsible for the context propagation.
 
 .. seealso::
-   | :doc:`What is an item reader? </domain/item-job/item-reader>`
+   | :doc:`What is an item reader? </core-concepts/item-job/item-reader>`

@@ -44,4 +44,4 @@ What types of item processors exists?
   dummy item processor that you can use in your unit tests.
 
 .. seealso::
-   | :doc:`What is an item job? </domain/item-job>`
+   | :doc:`What is an item job? </core-concepts/item-job>`

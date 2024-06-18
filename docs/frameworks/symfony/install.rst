@@ -69,7 +69,7 @@ All ``launchers`` are configured using a DSN, every scheme has it’s own associ
   * ``service``: the id of the service to use (required, an exception will be thrown otherwise)
 
 .. seealso::
-   | :doc:`What is a job launcher? </domain/job-launcher>`
+   | :doc:`What is a job launcher? </core-concepts/job-launcher>`
 
 JobExecution storage
 ~~~~~~~~~~~~~~~~~~~~
@@ -99,4 +99,4 @@ several options:
    | Because querying ``JobExecution`` in a filesystem might be slow, specially if you are planing to add UIs on top.
 
 .. seealso::
-   | :doc:`What is a job execution storage? </domain/job-execution-storage>`
+   | :doc:`What is a job execution storage? </core-concepts/job-execution-storage>`

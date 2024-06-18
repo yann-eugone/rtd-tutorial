@@ -94,4 +94,4 @@ Imagine that in an ``ItemJob`` you need to find objects from a database.
 | Otherwise, the query will be the fastest possible because it will use the object identity.
 
 .. seealso::
-   | :doc:`What is an item job? </domain/job>`
+   | :doc:`What is an item job? </core-concepts/job>`

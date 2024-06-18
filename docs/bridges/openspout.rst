@@ -51,7 +51,7 @@ that will read from CSV/ODS/XLSX file and return each line as an array.
     );
 
 .. seealso::
-   | :doc:`What is an item reader? </domain/item-job/item-reader>`
+   | :doc:`What is an item reader? </core-concepts/item-job/item-reader>`
 
 Item writer
 -----------
@@ -102,4 +102,4 @@ that will write to CSV/ODS/XLSX file and each item will written its own line.
     );
 
 .. seealso::
-   | :doc:`What is an item writer? </domain/item-job/item-writer>`
+   | :doc:`What is an item writer? </core-concepts/item-job/item-writer>`

@@ -64,7 +64,7 @@ Your first job
    | Otherwise, the service id will be used, and in that case, the service id is the FQCN.
 
 .. seealso::
-   | :doc:`What is a job? </domain/job>`
+   | :doc:`What is a job? </core-concepts/job>`
 
 Triggering the job
 ------------------

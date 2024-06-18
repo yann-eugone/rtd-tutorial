@@ -32,4 +32,4 @@ The command called is ``yokai:batch:run``, and the command will actually execute
 Additionally, the command will run with an output redirect (``>>``) to ``var/log/batch_execute.log``.
 
 .. seealso::
-   | :doc:`What is a job launcher? </domain/job-launcher>`
+   | :doc:`What is a job launcher? </core-concepts/job-launcher>`
