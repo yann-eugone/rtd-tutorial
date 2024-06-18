@@ -1,30 +1,30 @@
-Getting started
+Getting started as a standalone library
 ============================================================
+
+.. note::
+
+    | If you already have a running app, you might consider a different *getting started* guide,
+      based on the framework your application is working on:
+
+    * :doc:`/getting-started/with-symfony`
 
 Installation
 ------------------------------------------------------------
 
 .. code-block:: console
 
-   composer require yokai/batch
+    composer require yokai/batch
 
-Vocabulary
-------------------------------------------------------------
+.. note::
 
-| Because when you start with any library it is important to understand
-  what are the concepts it manipulates.
-| We recommend that you have a look to these pages before you start:
-
-* :doc:`Job </core-concepts/job>`: where you are going to work as a developer.
-* :doc:`Job Launcher </core-concepts/job-launcher>`: The entry point when you need to execute any job.
-* :doc:`Job Execution </core-concepts/job-execution>`: The representation of a certain execution of certain job.
-* :doc:`Job Execution Storage </core-concepts/job-execution-storage>`: The persistence layer of jobs executions.
-
+    | ``yokai/batch`` is the only package required.
+    | But there are many bridge packages you can install if you want to unlock more components.
+    | Have a look to dedicated documentation: :doc:`</bridges>`.
 
 Step by step example
 ------------------------------------------------------------
 
-As a developer, from your application, you want to launch a job
+As a developer, from your application, you want to launch a job.
 
 .. code-block:: php
 
@@ -90,6 +90,11 @@ The JobLauncher will have to be provided with all the jobs you create in your ap
     );
 
     $launcher->launch('import', ['path' => '/path/to/file/to/import']);
+
+.. note::
+
+    | ``JobContainer`` is an implementation of a `PSR11 container <https://www.php-fig.org/psr/psr-11/>`__`.
+    | You can use it if you want, but you can replace it with any implementation from your application.
 
 | But now, what if the job fails, or what if you wish to analyse what the job produced.
 | You need to a able to store JobExecution, so you can fetch it afterwards.

@@ -60,7 +60,7 @@ An import for each entity
    :language: php
 
 Factorise common logic
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All three imports behavior the same way:
 
@@ -79,7 +79,7 @@ All three imports behavior the same way:
    :language: php
 
 A job for the whole import
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | So far, we created one job per entity to import.
 | It is very convenient, because we can leverage the power of ``ItemJob``.

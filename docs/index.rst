@@ -53,8 +53,8 @@ Explore some of the things that could be built with **Yokai Batch**:
    :hidden:
    :caption: Getting Started
 
-   getting-started/installation
-   getting-started/quick-start
+   getting-started/standalone-library
+   getting-started/with-symfony
 
 .. toctree::
    :maxdepth: 2
@@ -89,13 +89,6 @@ Explore some of the things that could be built with **Yokai Batch**:
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Integrations with Frameworks
-
-   Symfony </frameworks/symfony>
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
    :caption: Bridges with Other Libraries
 
    What are bridges? </bridges>
@@ -105,6 +98,7 @@ Explore some of the things that could be built with **Yokai Batch**:
    Flysystem </bridges/league-flysystem>
    OpenSpout </bridges/openspout>
    Symfony Console </bridges/symfony-console>
+   Symfony Framework </bridges/symfony-framework>
    Symfony Messenger </bridges/symfony-messenger>
    Symfony Serializer </bridges/symfony-serializer>
    Symfony Validator </bridges/symfony-validator>

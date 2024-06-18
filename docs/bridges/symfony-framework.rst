@@ -1,5 +1,96 @@
-User Interface
+Bridge with ``symfony/framework-bundle``
 ============================================================
+
+The ``Messenger`` component for ``Symfony`` allows dispatch messages through a bus.
+
+Configure the Job launcher(s)
+------------------------------------------------------------
+
+You can use many different job launcher in your application,
+you will be able to register these using configuration:
+
+.. code-block:: yaml
+
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+        launcher:
+            default: simple
+            launchers:
+              simple: ...
+              async: ...
+
+.. note::
+   If you do not configure anything here, you will be using the
+   `SimpleJobLauncher <https://github.com/yokai-php/batch/blob/0.x/src/src/Launcher/SimpleJobLauncher.php>`__.
+
+| The ``default`` job launcher, must reference a launcher name, defined in the ``launchers`` list.
+| The ``default`` job launcher will be the autowired instance of job launcher when you ask for one.
+| All ``launchers`` will be registered as a service, and an autowire named alias will be configured for it.
+| For instance, in the example below, you will be able to register all these launchers like this:
+
+.. code-block:: php
+
+    <?php
+
+    use Yokai\Batch\Launcher\JobLauncherInterface;
+
+    final class YourAppCode
+    {
+        public function __construct(
+            private JobLauncherInterface $jobLauncher, // will inject the default job launcher
+            private JobLauncherInterface $simpleJobLauncher, // will inject the "simple" job launcher
+            private JobLauncherInterface $messengerJobLauncher, // will inject the "messenger" job launcher
+        ) {
+        }
+    }
+
+All ``launchers`` are configured using a DSN, every scheme has it’s own associated factory:
+
+* ``simple://simple``: a `SimpleJobLauncher <https://github.com/yokai-php/batch/blob/0.x/src/src/Launcher/SimpleJobLauncher.php>`__, no configuration allowed
+* ``messenger://messenger``: a `DispatchMessageJobLauncher <https://github.com/yokai-php/batch-symfony-messenger/blob/0.x/src/src/DispatchMessageJobLauncher.php>`__, no configuration allowed
+* ``console://console``: a `RunCommandJobLauncher <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/src/RunCommandJobLauncher.php>`__, configurable options:
+
+  * ``log``: the filename where command output will be redirected (defaults to ``batch_execute.log``)
+
+* ``service://service``: pointing to a service of your choice, configurable options:
+
+  * ``service``: the id of the service to use (required, an exception will be thrown otherwise)
+
+.. seealso::
+   | :doc:`What is a job launcher? </core-concepts/job-launcher>`
+
+Configure the JobExecution storage
+------------------------------------------------------------
+
+You can have only one storage for your ``JobExecution``, and you have several options:
+
+* ``filesystem`` will create a file for each ``JobExecution`` in
+  ``%kernel.project_dir%/var/batch/{execution.jobName}/{execution.id}.json``
+* ``dbal`` will create a row in a table for each ``JobExecution``
+* ``service`` will use a service you have defined in your application
+
+.. code-block:: yaml
+
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+        storage:
+            filesystem: ~
+            # Or with yokai/batch-doctrine-dbal (& doctrine/dbal)
+            # dbal: ~
+            # Or with a service of yours
+            # service: ~
+
+.. note::
+   | The default storage is ``filesystem``, because it only requires a writeable filesystem.
+   | But if you already have ``doctrine/dbal`` in your project, it is highly recommended to use it instead.
+   | Because querying ``JobExecution`` in a filesystem might be slow, specially if you are planing to add UIs on top.
+
+.. seealso::
+   | :doc:`What is a job execution? </core-concepts/job-execution>`
+   | :doc:`What is a job execution storage? </core-concepts/job-execution-storage>`
+
+User interface to visualize ``JobExecution``
+------------------------------------------------------------
 
 The package is shipped with few routes that will allow you and your users, to watch for ``JobExecution``.
 
@@ -9,16 +100,13 @@ The package is shipped with few routes that will allow you and your users, to wa
 .. image:: /_static/images/symfony/ui/bootstrap4-warnings.png
 
 Installation
-------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For the UI to be enabled, it is required that you install some dependencies:
 
 .. code-block:: shell
 
     composer require symfony/translation symfony/twig-bundle
-
-Configuration
-------------------------------------------------------------
 
 The UI is disabled by default, you must enable it explicitly:
 
@@ -116,7 +204,7 @@ And create the class that will cover the templating:
    that will cover both prefix and static variables at construction.
 
 Filtering
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``JobExecution`` list includes a filter form, but you will need another optional dependency:
 
@@ -125,7 +213,7 @@ The ``JobExecution`` list includes a filter form, but you will need another opti
     composer require symfony/form
 
 Security
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There is no access control over ``JobExecution`` by default, you will need another optional dependency:
 
@@ -177,7 +265,7 @@ Every security attribute the bundle is using is configurable:
     }
 
 Integration with SonataAdminBundle
-------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | If you are on a
   `SonataAdmin <https://symfony.com/bundles/SonataAdminBundle/current/index.html>`__
@@ -205,7 +293,7 @@ Integration with SonataAdminBundle
    With this configuration, we will look for templates like ``@YokaiBatch/sonata/*.html.twig``.
 
 Customizing templates
-------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | You can override templates like
   `described it Symfony’s documentation <https://symfony.com/doc/current/bundles/override.html>`__.
@@ -223,3 +311,35 @@ But you can also register job name dedicated templates if you need some specific
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_parameters.html.twig``
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_summary.html.twig``
 * ``templates/bundles/YokaiBatchBundle/bootstrap4/show/{job name}/_warnings.html.twig``
+
+
+Logger service that log in ``JobExecution``
+------------------------------------------------------------
+
+| The batch logger will log inside the JobExecution.
+| In a Symfony project, you can use that with the symfony autowiring
+  by naming your variable as ``$yokaiBatchLogger``
+
+.. code-block:: php
+
+    <?php
+
+    namespace App;
+
+    use Psr\Log\LoggerInterface;
+
+    final readonly class YourService
+    {
+        public function __construct(
+            private LoggerInterface $yokaiBatchLogger,
+        ) {
+        }
+
+        public function method()
+        {
+            $this->yokaiBatchLogger->error(...);
+        }
+    }
+
+.. seealso::
+   | :doc:`What is the job execution? </core-concepts/job-execution>`
