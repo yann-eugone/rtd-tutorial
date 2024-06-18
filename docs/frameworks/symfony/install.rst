@@ -1,11 +1,11 @@
 Install and configure in a Symfony project
 ==========================================
 
-.. code:: console
+.. code-block:: console
 
     composer require yokai/batch-symfony-framework
 
-.. code:: php
+.. code-block:: php
     // config/bundles.php
     return [
         // ...
@@ -18,7 +18,7 @@ Job launcher
 You can use many different job launcher in your application, you will be
 able to register these using configuration:
 
-.. code:: yaml
+.. code-block:: yaml
 
    # config/packages/yokai_batch.yaml
    yokai_batch:
@@ -37,7 +37,7 @@ able to register these using configuration:
 | All ``launchers`` will be registered as a service, and an autowire named alias will be configured for it.
 | For instance, in the example below, you will be able to register all these launchers like this:
 
-.. code:: php
+.. code-block:: php
    <?php
 
    use Yokai\Batch\Launcher\JobLauncherInterface;
@@ -78,7 +78,7 @@ several options:
 * ``dbal`` will create a row in a table for each ``JobExecution``
 * ``service`` will use a service you have defined in your application
 
-.. code:: yaml
+.. code-block:: yaml
    # config/packages/yokai_batch.yaml
    yokai_batch:
        storage:
