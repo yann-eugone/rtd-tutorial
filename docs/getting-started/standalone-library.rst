@@ -93,7 +93,7 @@ The JobLauncher will have to be provided with all the jobs you create in your ap
 
 .. note::
 
-    | ``JobContainer`` is an implementation of a `PSR11 container <https://www.php-fig.org/psr/psr-11/>`__`.
+    | ``JobContainer`` is an implementation of a `PSR11 container <https://www.php-fig.org/psr/psr-11/>`__.
     | You can use it if you want, but you can replace it with any implementation from your application.
 
 | But now, what if the job fails, or what if you wish to analyse what the job produced.
