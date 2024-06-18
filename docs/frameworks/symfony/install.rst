@@ -19,6 +19,7 @@ You can use many different job launcher in your application, you will be
 able to register these using configuration:
 
 .. code:: yaml
+
    # config/packages/yokai_batch.yaml
    yokai_batch:
        launcher:
@@ -26,8 +27,6 @@ able to register these using configuration:
            launchers:
              simple: ...
              async: ...
-
-..
 
 .. note::
    If you do not configure anything here, you will be using the
