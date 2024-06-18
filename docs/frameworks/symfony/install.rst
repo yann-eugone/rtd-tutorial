@@ -6,6 +6,7 @@ Install and configure in a Symfony project
     composer require yokai/batch-symfony-framework
 
 .. code-block:: php
+
     // config/bundles.php
     return [
         // ...
@@ -20,13 +21,13 @@ able to register these using configuration:
 
 .. code-block:: yaml
 
-   # config/packages/yokai_batch.yaml
-   yokai_batch:
-       launcher:
-           default: simple
-           launchers:
-             simple: ...
-             async: ...
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+        launcher:
+            default: simple
+            launchers:
+              simple: ...
+              async: ...
 
 .. note::
    If you do not configure anything here, you will be using the
@@ -38,19 +39,20 @@ able to register these using configuration:
 | For instance, in the example below, you will be able to register all these launchers like this:
 
 .. code-block:: php
-   <?php
 
-   use Yokai\Batch\Launcher\JobLauncherInterface;
+    <?php
 
-   final class YourAppCode
-   {
-       public function __construct(
-           private JobLauncherInterface $jobLauncher, // will inject the default job launcher
-           private JobLauncherInterface $simpleJobLauncher, // will inject the "simple" job launcher
-           private JobLauncherInterface $messengerJobLauncher, // will inject the "messenger" job launcher
-       ) {
-       }
-   }
+    use Yokai\Batch\Launcher\JobLauncherInterface;
+
+    final class YourAppCode
+    {
+        public function __construct(
+            private JobLauncherInterface $jobLauncher, // will inject the default job launcher
+            private JobLauncherInterface $simpleJobLauncher, // will inject the "simple" job launcher
+            private JobLauncherInterface $messengerJobLauncher, // will inject the "messenger" job launcher
+        ) {
+        }
+    }
 
 All ``launchers`` are configured using a DSN, every scheme has it’s own associated factory:
 
@@ -79,14 +81,15 @@ several options:
 * ``service`` will use a service you have defined in your application
 
 .. code-block:: yaml
-   # config/packages/yokai_batch.yaml
-   yokai_batch:
-       storage:
-           filesystem: ~
-           # Or with yokai/batch-doctrine-dbal (& doctrine/dbal)
-           # dbal: ~
-           # Or with a service of yours
-           # service: ~
+
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+        storage:
+            filesystem: ~
+            # Or with yokai/batch-doctrine-dbal (& doctrine/dbal)
+            # dbal: ~
+            # Or with a service of yours
+            # service: ~
 
 .. note::
    | The default storage is ``filesystem``, because it only requires a writeable filesystem.
