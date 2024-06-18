@@ -1,5 +1,5 @@
 Bridges
-=======
+============================================================
 
 | ``yokai/batch`` has no dependency on itself.
 | But it is part of a larger package ecosystem, that are bridges with popular libraries and frameworks.

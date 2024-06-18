@@ -1,10 +1,10 @@
 Bridge with ``symfony/messenger``
-===================================
+============================================================
 
 The ``Messenger`` component for ``Symfony`` allows dispatch messages through a bus.
 
 Launch Job through Messenger dispatcher
----------------------------------------
+------------------------------------------------------------
 
 The
 `DispatchMessageJobLauncher <https://github.com/yokai-php/batch-symfony-messenger/blob/0.x/src/DispatchMessageJobLauncher.php>`__
@@ -16,7 +16,7 @@ message will be dispatched and handled by the
 will be called with that message after being routed.
 
 How to configure an async transport for the launcher?
-------------------------------------------------------
+------------------------------------------------------------
 
 You first need to configure an async transport, like explained
 `in Symfony’s doc <https://symfony.com/doc/current/messenger.html#transports-async-queued-messages>`__.

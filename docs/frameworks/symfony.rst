@@ -1,15 +1,15 @@
 Using ``yokai/batch`` in a Symfony Project
-==========================================
+============================================================
 
 Frameworks offers various ways to simplify developer's daily jobs.
 
 Installation
-------------
+------------------------------------------------------------
 
 Please refer to the :doc:`dedicated documentation </frameworks/symfony/install>`.
 
 Job as a service
-----------------
+------------------------------------------------------------
 
 | We need to provide the library with all the implemented jobs we have.
 | We will be using Symfony's dependency injection system for that.
@@ -28,7 +28,7 @@ Job as a service
             tags: ['yokai_batch.job']
 
 Your first job
---------------
+------------------------------------------------------------
 
 | In a Symfony project, we will prefer using one class per job, because service discovery is so easy to use.
 | But also because it will be very far easier to configure your job using PHP than any other format.
@@ -67,7 +67,7 @@ Your first job
    | :doc:`What is a job? </core-concepts/job>`
 
 Triggering the job
-------------------
+------------------------------------------------------------
 
 Then the job will be triggered with its name (or service id when notc specified):
 

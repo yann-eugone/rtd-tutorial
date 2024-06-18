@@ -1,5 +1,5 @@
 Job parameter accessor
-======================
+============================================================
 
 When a job (or a component within a job) can be working with a parameterized value, it can rely on a
 `JobParameterAccessorInterface <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/JobParameterAccessorInterface.php>`__
@@ -29,7 +29,7 @@ instance to retrieve that value.
     }
 
 What types of parameter accessors exists?
------------------------------------------
+------------------------------------------------------------
 
 **Built-in parameter accessors:**
 * `ChainParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ChainParameterAccessor.php>`__:

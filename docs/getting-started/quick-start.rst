@@ -1,15 +1,15 @@
 Getting started
-===============
+============================================================
 
 Installation
-------------
+------------------------------------------------------------
 
 .. code-block:: console
 
    composer require yokai/batch
 
 Vocabulary
-----------
+------------------------------------------------------------
 
 | Because when you start with any library it is important to understand
   what are the concepts it manipulates.
@@ -22,7 +22,7 @@ Vocabulary
 
 
 Step by step example
---------------------
+------------------------------------------------------------
 
 As a developer, from your application, you want to launch a job
 

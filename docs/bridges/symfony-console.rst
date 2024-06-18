@@ -1,10 +1,10 @@
 Bridge with ``symfony/console``
-===================================
+============================================================
 
 todo
 
 Command
---------------
+------------------------------------------------------------
 
 The `RunJobCommand <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/src/RunJobCommand.php>`__
 can execute any job.
@@ -22,7 +22,7 @@ Examples:
     bin/console export '{"toFile":"/path/to/file.xml"}'
 
 Job launcher
---------------
+------------------------------------------------------------
 
 The `RunCommandJobLauncher <https://github.com/yokai-php/batch-symfony-console/blob/0.x/src/src/RunCommandJobLauncher.php>`__
 execute jobs via an asynchronous symfony command.

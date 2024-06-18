@@ -1,5 +1,5 @@
 Example: StarWars import
-========================================
+============================================================
 
 .. note::
    | The code involved in this example is part of the test suite of **Yokai Batch**.
@@ -11,7 +11,7 @@ Example: StarWars import
 
 
 What are we trying to do?
-----------------------------------------
+------------------------------------------------------------
 
 | We have been provided with `data from the StarWars universe <https://www.kaggle.com/jsphyg/star-wars>`__.
 | Our job is to import these data in a relational database.
@@ -23,7 +23,7 @@ We will import the following data:
 * Planets
 
 Designing the entities
-----------------------------------------
+------------------------------------------------------------
 
 .. literalinclude:: star-wars/entity-specie.php
    :language: php
@@ -35,10 +35,10 @@ Designing the entities
    :language: php
 
 Writing the import
-----------------------------------------
+------------------------------------------------------------
 
 Install the packages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: console
 
@@ -48,7 +48,7 @@ Install the packages
     composer require yokai/batch-doctrine-persistence
 
 An import for each entity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. literalinclude:: star-wars/job-planet.php
    :language: php
@@ -91,7 +91,7 @@ A job for the whole import
    :language: php
 
 Running the import
-----------------------------------------
+------------------------------------------------------------
 
 Now, you can trigger this job anytime you want, using the ``JobLauncher`` configured in your application.
 

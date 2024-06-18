@@ -1,5 +1,5 @@
 Install and configure in a Symfony project
-==========================================
+============================================================
 
 .. code-block:: console
 
@@ -16,7 +16,7 @@ Install and configure in a Symfony project
     ];
 
 Job launcher
-------------
+------------------------------------------------------------
 
 You can use many different job launcher in your application, you will be
 able to register these using configuration:
@@ -72,7 +72,7 @@ All ``launchers`` are configured using a DSN, every scheme has it’s own associ
    | :doc:`What is a job launcher? </core-concepts/job-launcher>`
 
 JobExecution storage
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can have only one storage for your ``JobExecution``, and you have
 several options:

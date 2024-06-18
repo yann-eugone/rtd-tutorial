@@ -1,8 +1,8 @@
 Item Job
-========
+============================================================
 
 What is an item?
-----------------
+------------------------------------------------------------
 
 The library allows you to declare and execute jobs, but wait why do we
 named it batch then? There you are, the ``ItemJob`` is where batch
@@ -14,7 +14,7 @@ If you are familiar with the concept of an `ETL <https://en.wikipedia.org/wiki/E
 this is pretty much the same.
 
 How to create an item job?
----------------------------
+------------------------------------------------------------
 
 The item job allows you to split your logic into 3 different component:
 

@@ -1,5 +1,5 @@
 User Interface
-==============
+============================================================
 
 The package is shipped with few routes that will allow you and your users, to watch for ``JobExecution``.
 
@@ -9,7 +9,7 @@ The package is shipped with few routes that will allow you and your users, to wa
 .. image:: /_static/images/symfony/ui/bootstrap4-warnings.png
 
 Installation
-------------
+------------------------------------------------------------
 
 For the UI to be enabled, it is required that you install some dependencies:
 
@@ -18,7 +18,7 @@ For the UI to be enabled, it is required that you install some dependencies:
     composer require symfony/translation symfony/twig-bundle
 
 Configuration
--------------
+------------------------------------------------------------
 
 The UI is disabled by default, you must enable it explicitly:
 
@@ -38,7 +38,7 @@ You will also need to import bundle routes:
       resource: "@YokaiBatchBundle/Resources/routing/ui.xml"
 
 Templating
-~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | The templating service is used by the
   `JobController <https://github.com/yokai-php/batch-symfony-framework/blob/0.x/src/src/UserInterface/Controller/JobController.php>`__
@@ -177,7 +177,7 @@ Every security attribute the bundle is using is configurable:
     }
 
 Integration with SonataAdminBundle
-----------------------------------
+------------------------------------------------------------
 
 | If you are on a
   `SonataAdmin <https://symfony.com/bundles/SonataAdminBundle/current/index.html>`__
@@ -205,7 +205,7 @@ Integration with SonataAdminBundle
    With this configuration, we will look for templates like ``@YokaiBatch/sonata/*.html.twig``.
 
 Customizing templates
----------------------
+------------------------------------------------------------
 
 | You can override templates like
   `described it Symfony’s documentation <https://symfony.com/doc/current/bundles/override.html>`__.

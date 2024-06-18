@@ -1,5 +1,5 @@
 \*Aware interfaces
-==================
+============================================================
 
 | When a job execution starts,
   a `JobExecution <https://github.com/yokai-php/batch/blob/0.x/src/JobExecution.php>`__ is created for it.
@@ -13,7 +13,7 @@ You will often want to access this object or one of its child to :
 To do that, your component will need to implement an interface, telling the library that you need something.
 
 What is ``JobExecutionAwareInterface``?
----------------------------------------
+------------------------------------------------------------
 
 The `JobExecutionAwareInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/JobExecutionAwareInterface.php>`__
 will allow you to gain access to the current
@@ -25,7 +25,7 @@ will allow you to gain access to the current
    for a default implementation that is most of the time sufficient.
 
 What is ``JobParametersAwareInterface``?
-----------------------------------------
+------------------------------------------------------------
 
 The
 `JobParametersAwareInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/JobParametersAwareInterface.php>`__
@@ -38,7 +38,7 @@ will allow you to gain access to the
    for a default implementation that is most of the time sufficient.
 
 What is ``SummaryAwareInterface``?
-----------------------------------
+------------------------------------------------------------
 
 The `SummaryAwareInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/SummaryAwareInterface.php>`__
 will allow you to gain access to the `Summary <https://github.com/yokai-php/batch/blob/0.x/src/Summary.php>`__ of the current execution.
@@ -48,7 +48,7 @@ will allow you to gain access to the `Summary <https://github.com/yokai-php/batc
    for a default implementation that is most of the time sufficient.
 
 How does that work exactly?
----------------------------
+------------------------------------------------------------
 
 There is no magic involved here, every component is responsible for propagating the context through these interfaces.
 
