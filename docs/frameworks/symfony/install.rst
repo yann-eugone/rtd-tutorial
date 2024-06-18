@@ -2,14 +2,15 @@ Install and configure in a Symfony project
 ==========================================
 
 .. code:: console
-   composer require yokai/batch-symfony-framework
+
+    composer require yokai/batch-symfony-framework
 
 .. code:: php
-   // config/bundles.php
-   return [
-       // ...
-       Yokai\Batch\Bridge\Symfony\Framework\YokaiBatchBundle::class => ['all' => true],
-   ];
+    // config/bundles.php
+    return [
+        // ...
+        Yokai\Batch\Bridge\Symfony\Framework\YokaiBatchBundle::class => ['all' => true],
+    ];
 
 Job launcher
 ------------
