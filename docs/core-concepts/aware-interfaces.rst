@@ -53,6 +53,7 @@ How does that work exactly?
 There is no magic involved here, every component is responsible for propagating the context through these interfaces.
 
 In the library, you will find that :
+
 * `ItemJob <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/ItemJob.php>`__ is propagating context to
   `ItemReaderInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/ItemReaderInterface.php>`__,
   `ItemProcessorInterface <https://github.com/yokai-php/batch/blob/0.x/src/Job/Item/ItemProcessorInterface.php>`__

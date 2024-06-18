@@ -40,7 +40,7 @@ What types of job exists?
 * `ItemJob <https://github.com/yokai-php/batch/tree/0.x/src/Job/Item/ItemJob.php>`__: ETL like, batch processing
   job (:doc:`documentation </core-concepts/item-job>`).
 * `JobWithChildJobs <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobWithChildJobs.php>`__: a job that
-  trigger other jobs.
+  trigger other jobs (:doc:`documentation </core-concepts/job-with-children>`).
 * `TriggerScheduledJobsJob <https://github.com/yokai-php/batch/tree/0.x/src/Trigger/TriggerScheduledJobsJob.php>`__:
   a job that trigger other jobs when schedule is due (todo documentation).
 
@@ -48,7 +48,7 @@ What types of job exists?
 
 * From ``league/flysystem`` bridge:
 
-  * `CopyFilesJob https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/CopyFilesJob.php>`__:
+  * `CopyFilesJob <https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/CopyFilesJob.php>`__:
     copy files from one filesystem to another.
   * `MoveFilesJob <https://github.com/yokai-php/batch-league-flysystem/blob/0.x/src/Job/MoveFilesJob.php>`__:
     move files from one filesystem to another.

@@ -32,6 +32,7 @@ What types of parameter accessors exists?
 ------------------------------------------------------------
 
 **Built-in parameter accessors:**
+
 * `ChainParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ChainParameterAccessor.php>`__:
   try multiple parameter accessors, the first that is not failing is used.
 * `ClosestJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ClosestJobExecutionAccessor.php>`__:
@@ -39,8 +40,7 @@ What types of parameter accessors exists?
 * `DefaultParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/DefaultParameterAccessor.php>`__:
   try accessing parameter using another parameter accessor, use default value if failed.
 * `JobExecutionParameterAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/JobExecutionParameterAccessor.php>`__:
-  extract value from job execution’s
-`parameters <https://github.com/yokai-php/batch/blob/0.x/src/src/JobParameters.php>`__.
+  extract value from job execution’s `parameters <https://github.com/yokai-php/batch/blob/0.x/src/src/JobParameters.php>`__.
 * `JobExecutionSummaryAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/JobExecutionSummaryAccessor.php>`__:
   extract value from job execution’s `summary <https://github.com/yokai-php/batch/blob/0.x/src/src/Summary.php>`__.
 * `ParentJobExecutionAccessor <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/ParentJobExecutionAccessor.php>`__:
