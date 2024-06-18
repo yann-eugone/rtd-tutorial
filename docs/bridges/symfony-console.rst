@@ -16,9 +16,10 @@ The command accepts 2 arguments:
 
 Examples:
 
-.. code:: console
-   bin/console import
-   bin/console export '{"toFile":"/path/to/file.xml"}'
+.. code-block:: console
+
+    bin/console import
+    bin/console export '{"toFile":"/path/to/file.xml"}'
 
 Job launcher
 --------------

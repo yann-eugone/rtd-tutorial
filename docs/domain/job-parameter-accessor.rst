@@ -5,27 +5,28 @@ When a job (or a component within a job) can be working with a parameterized val
 `JobParameterAccessorInterface <https://github.com/yokai-php/batch/blob/0.x/src/src/Job/Parameters/JobParameterAccessorInterface.php>`__
 instance to retrieve that value.
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\Job\JobInterface;
-   use Yokai\Batch\Job\Parameters\JobParameterAccessorInterface;
-   use Yokai\Batch\JobExecution;
+    <?php
 
-   class FooJob implements JobInterface
-   {
-       public function __construct(
-           private JobParameterAccessorInterface $path,
-       ) {
-       }
+    use Yokai\Batch\Job\JobInterface;
+    use Yokai\Batch\Job\Parameters\JobParameterAccessorInterface;
+    use Yokai\Batch\JobExecution;
 
-       public function execute(JobExecution $jobExecution): void
-       {
-           /** @var string $path */
-           $path = $this->path->get($jobExecution);
-           // do something with $path
-       }
-   }
+    class FooJob implements JobInterface
+    {
+        public function __construct(
+            private JobParameterAccessorInterface $path,
+        ) {
+        }
+
+        public function execute(JobExecution $jobExecution): void
+        {
+            /** @var string $path */
+            $path = $this->path->get($jobExecution);
+            // do something with $path
+        }
+    }
 
 What types of parameter accessors exists?
 -----------------------------------------

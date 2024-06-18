@@ -7,6 +7,8 @@ Install and configure in a Symfony project
 
 .. code-block:: php
 
+    <?php
+
     // config/bundles.php
     return [
         // ...

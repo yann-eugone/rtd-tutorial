@@ -13,42 +13,43 @@ The job launcher is responsible for executing/scheduling every jobs.
 What is the simplest way to launch a job?
 -----------------------------------------
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\Factory\JobExecutionFactory;
-   use Yokai\Batch\Factory\JobExecutionParametersBuilder\NullJobExecutionParametersBuilder;
-   use Yokai\Batch\Factory\UniqidJobExecutionIdGenerator;
-   use Yokai\Batch\Job\JobExecutionAccessor;
-   use Yokai\Batch\Job\JobExecutor;
-   use Yokai\Batch\Job\JobInterface;
-   use Yokai\Batch\JobExecution;
-   use Yokai\Batch\Launcher\SimpleJobLauncher;
-   use Yokai\Batch\Registry\JobContainer;
-   use Yokai\Batch\Registry\JobRegistry;
-   use Yokai\Batch\Storage\NullJobExecutionStorage;
+    <?php
 
-   // you can instead use any psr/container implementation
-   // @see https://packagist.org/providers/psr/container-implementation
-   $jobs = new JobContainer([
-       'your.job.name' => new class implements JobInterface {
-           public function execute(JobExecution $jobExecution): void
-           {
-               // your business logic
-           }
-       },
-   ]);
-   $jobExecutionStorage = new NullJobExecutionStorage();
+    use Yokai\Batch\Factory\JobExecutionFactory;
+    use Yokai\Batch\Factory\JobExecutionParametersBuilder\NullJobExecutionParametersBuilder;
+    use Yokai\Batch\Factory\UniqidJobExecutionIdGenerator;
+    use Yokai\Batch\Job\JobExecutionAccessor;
+    use Yokai\Batch\Job\JobExecutor;
+    use Yokai\Batch\Job\JobInterface;
+    use Yokai\Batch\JobExecution;
+    use Yokai\Batch\Launcher\SimpleJobLauncher;
+    use Yokai\Batch\Registry\JobContainer;
+    use Yokai\Batch\Registry\JobRegistry;
+    use Yokai\Batch\Storage\NullJobExecutionStorage;
 
-   $launcher = new SimpleJobLauncher(
-       new JobExecutionAccessor(
-           new JobExecutionFactory(new UniqidJobExecutionIdGenerator(), new NullJobExecutionParametersBuilder()),
-           $jobExecutionStorage,
-       ),
-       new JobExecutor(new JobRegistry($jobs), $jobExecutionStorage, null),
-   );
+    // you can instead use any psr/container implementation
+    // @see https://packagist.org/providers/psr/container-implementation
+    $jobs = new JobContainer([
+        'your.job.name' => new class implements JobInterface {
+            public function execute(JobExecution $jobExecution): void
+            {
+                // your business logic
+            }
+        },
+    ]);
+    $jobExecutionStorage = new NullJobExecutionStorage();
 
-   $execution = $launcher->launch('your.job.name', ['job' => ['configuration']]);
+    $launcher = new SimpleJobLauncher(
+        new JobExecutionAccessor(
+            new JobExecutionFactory(new UniqidJobExecutionIdGenerator(), new NullJobExecutionParametersBuilder()),
+            $jobExecutionStorage,
+        ),
+        new JobExecutor(new JobRegistry($jobs), $jobExecutionStorage, null),
+    );
+
+    $execution = $launcher->launch('your.job.name', ['job' => ['configuration']]);
 
 What types of launcher exists?
 -------------------------------

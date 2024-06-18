@@ -25,110 +25,114 @@ Step by step example
 
 As a developer, from your application, you want to launch a job
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\Launcher\SimpleJobLauncher;
+    <?php
 
-   $launcher = new SimpleJobLauncher(...);
+    use Yokai\Batch\Launcher\SimpleJobLauncher;
 
-   $launcher->launch('import', ['path' => '/path/to/file/to/import']);
+    $launcher = new SimpleJobLauncher(...);
+
+    $launcher->launch('import', ['path' => '/path/to/file/to/import']);
 
 | This job will be executed by the ``JobLauncher``, and at some point in the call graph, your code will run.
 | This logic have to be implemented in a ``Job``.
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\Job\JobInterface;
-   use Yokai\Batch\JobExecution;
-   use Yokai\Batch\Launcher\SimpleJobLauncher;
+    <?php
 
-   new class implements JobInterface {
-       public function execute(JobExecution $jobExecution): void
-       {
-           $fileToImport = $jobExecution->getParameter('path');
-           // your import logic here
-       }
-   };
+    use Yokai\Batch\Job\JobInterface;
+    use Yokai\Batch\JobExecution;
+    use Yokai\Batch\Launcher\SimpleJobLauncher;
 
-   $launcher = new SimpleJobLauncher(...);
+    new class implements JobInterface {
+        public function execute(JobExecution $jobExecution): void
+        {
+            $fileToImport = $jobExecution->getParameter('path');
+            // your import logic here
+        }
+    };
 
-   $launcher->launch('import', ['path' => '/path/to/file/to/import']);
+    $launcher = new SimpleJobLauncher(...);
+
+    $launcher->launch('import', ['path' => '/path/to/file/to/import']);
 
 The JobLauncher will have to be provided with all the jobs you create in your application, so it can launch any of it.
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\Job\JobInterface;
-   use Yokai\Batch\JobExecution;
-   use Yokai\Batch\Launcher\SimpleJobLauncher;
-   use Yokai\Batch\Registry\JobContainer;
-   use Yokai\Batch\Registry\JobRegistry;
+    <?php
 
-   $container = new JobContainer([
-       'import' => new class implements JobInterface {
-           public function execute(JobExecution $jobExecution): void
-           {
-               $fileToImport = $jobExecution->getParameter('path');
-               // your import logic here
-           }
-       },
-   ]);
+    use Yokai\Batch\Job\JobInterface;
+    use Yokai\Batch\JobExecution;
+    use Yokai\Batch\Launcher\SimpleJobLauncher;
+    use Yokai\Batch\Registry\JobContainer;
+    use Yokai\Batch\Registry\JobRegistry;
 
-   $launcher = new SimpleJobLauncher(
-       ...,
-       new JobExecutor(
-           new JobRegistry($container),
-           ...
-       )
-   );
+    $container = new JobContainer([
+        'import' => new class implements JobInterface {
+            public function execute(JobExecution $jobExecution): void
+            {
+                $fileToImport = $jobExecution->getParameter('path');
+                // your import logic here
+            }
+        },
+    ]);
 
-   $launcher->launch('import', ['path' => '/path/to/file/to/import']);
+    $launcher = new SimpleJobLauncher(
+        ...,
+        new JobExecutor(
+            new JobRegistry($container),
+            ...
+        )
+    );
+
+    $launcher->launch('import', ['path' => '/path/to/file/to/import']);
 
 | But now, what if the job fails, or what if you wish to analyse what the job produced.
 | You need to a able to store JobExecution, so you can fetch it afterwards.
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\Factory\JobExecutionFactory;
-   use Yokai\Batch\Factory\JobExecutionParametersBuilder\NullJobExecutionParametersBuilder;
-   use Yokai\Batch\Factory\UniqidJobExecutionIdGenerator;
-   use Yokai\Batch\Job\JobExecutionAccessor;
-   use Yokai\Batch\Job\JobExecutor;
-   use Yokai\Batch\Job\JobInterface;
-   use Yokai\Batch\JobExecution;
-   use Yokai\Batch\Launcher\SimpleJobLauncher;
-   use Yokai\Batch\Registry\JobContainer;
-   use Yokai\Batch\Registry\JobRegistry;
-   use Yokai\Batch\Serializer\JsonJobExecutionSerializer;
-   use Yokai\Batch\Storage\FilesystemJobExecutionStorage;
+    <?php
 
-   $container = new JobContainer([
-       'import' => new class implements JobInterface {
-           public function execute(JobExecution $jobExecution): void
-           {
-               $fileToImport = $jobExecution->getParameter('path');
-               // your import logic here
-           }
-       },
-   ]);
+    use Yokai\Batch\Factory\JobExecutionFactory;
+    use Yokai\Batch\Factory\JobExecutionParametersBuilder\NullJobExecutionParametersBuilder;
+    use Yokai\Batch\Factory\UniqidJobExecutionIdGenerator;
+    use Yokai\Batch\Job\JobExecutionAccessor;
+    use Yokai\Batch\Job\JobExecutor;
+    use Yokai\Batch\Job\JobInterface;
+    use Yokai\Batch\JobExecution;
+    use Yokai\Batch\Launcher\SimpleJobLauncher;
+    use Yokai\Batch\Registry\JobContainer;
+    use Yokai\Batch\Registry\JobRegistry;
+    use Yokai\Batch\Serializer\JsonJobExecutionSerializer;
+    use Yokai\Batch\Storage\FilesystemJobExecutionStorage;
 
-   $jobExecutionStorage = new FilesystemJobExecutionStorage(new JsonJobExecutionSerializer(), '/dir/where/jobs/are/stored');
-   $launcher = new SimpleJobLauncher(
-       new JobExecutionAccessor(
-           new JobExecutionFactory(new UniqidJobExecutionIdGenerator(), new NullJobExecutionParametersBuilder()),
-           $jobExecutionStorage
-       ),
-       new JobExecutor(
-           new JobRegistry($container),
-           $jobExecutionStorage,
-           null // or an instance of \Psr\EventDispatcher\EventDispatcherInterface
-       )
-   );
+    $container = new JobContainer([
+        'import' => new class implements JobInterface {
+            public function execute(JobExecution $jobExecution): void
+            {
+                $fileToImport = $jobExecution->getParameter('path');
+                // your import logic here
+            }
+        },
+    ]);
 
-   $importExecution = $launcher->launch('import', ['path' => '/path/to/file/to/import']);
+    $jobExecutionStorage = new FilesystemJobExecutionStorage(new JsonJobExecutionSerializer(), '/dir/where/jobs/are/stored');
+    $launcher = new SimpleJobLauncher(
+        new JobExecutionAccessor(
+            new JobExecutionFactory(new UniqidJobExecutionIdGenerator(), new NullJobExecutionParametersBuilder()),
+            $jobExecutionStorage
+        ),
+        new JobExecutor(
+            new JobRegistry($container),
+            $jobExecutionStorage,
+            null // or an instance of \Psr\EventDispatcher\EventDispatcherInterface
+        )
+    );
+
+    $importExecution = $launcher->launch('import', ['path' => '/path/to/file/to/import']);
 
 There you go, you have a fully functional stack to start working with the library.

@@ -8,25 +8,26 @@ Use the batch logger
 | In a Symfony project, you can use that with the symfony autowiring
   by naming your variable as ``$yokaiBatchLogger``
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   namespace App;
+    <?php
 
-   use Psr\Log\LoggerInterface;
+    namespace App;
 
-   final readonly class YourService
-   {
-       public function __construct(
-           private LoggerInterface $yokaiBatchLogger,
-       ) {
-       }
+    use Psr\Log\LoggerInterface;
 
-       public function method()
-       {
-           $this->yokaiBatchLogger->error(...);
-       }
-   }
+    final readonly class YourService
+    {
+        public function __construct(
+            private LoggerInterface $yokaiBatchLogger,
+        ) {
+        }
+
+        public function method()
+        {
+            $this->yokaiBatchLogger->error(...);
+        }
+    }
 
 .. seealso::
    | :doc:`What is the job execution? </domain/job-execution>`

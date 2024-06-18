@@ -13,26 +13,29 @@ Installation
 
 For the UI to be enabled, it is required that you install some dependencies:
 
-.. code:: shell
-   composer require symfony/translation symfony/twig-bundle
+.. code-block:: shell
+
+    composer require symfony/translation symfony/twig-bundle
 
 Configuration
 -------------
 
 The UI is disabled by default, you must enable it explicitly:
 
-.. code:: yaml
-   # config/packages/yokai_batch.yaml
-   yokai_batch:
-     ui:
-       enabled: true
+.. code-block:: yaml
+
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+      ui:
+        enabled: true
 
 You will also need to import bundle routes:
 
-.. code:: yaml
-   # config/routes/yokai_batch.yaml
-   _yokai_batch:
-     resource: "@YokaiBatchBundle/Resources/routing/ui.xml"
+.. code-block:: yaml
+
+    # config/routes/yokai_batch.yaml
+    _yokai_batch:
+      resource: "@YokaiBatchBundle/Resources/routing/ui.xml"
 
 Templating
 ~~~~~~~~~~
@@ -50,58 +53,62 @@ By default
 
 You can configure a prefix for all templates:
 
-.. code:: yaml
-   # config/packages/yokai_batch.yaml
-   yokai_batch:
-     ui:
-       templating:
-         prefix: 'batch/job/'
+.. code-block:: yaml
+
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+      ui:
+        templating:
+          prefix: 'batch/job/'
 
 .. note::
    With this configuration, we will look for templates like ``batch/job/*.html.twig``.
 
 You can also configure the name of the base template for the root views of that bundle:
 
-.. code:: yaml
-   # config/packages/yokai_batch.yaml
-   yokai_batch:
-     ui:
-       templating:
-         base_template: 'layout.html.twig'
+.. code-block:: yaml
+
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+      ui:
+        templating:
+          base_template: 'layout.html.twig'
 
 .. note::
    With this configuration, the template base view will be ``layout.html.twig``.
 
 If these are not enough, or if you need to add more variables to context, you can configure a service:
 
-.. code:: yaml
-   # config/packages/yokai_batch.yaml
-   yokai_batch:
-     ui:
-       templating:
-         service: 'App\Batch\AppTemplating'
+.. code-block:: yaml
+
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+      ui:
+        templating:
+          service: 'App\Batch\AppTemplating'
 
 And create the class that will cover the templating:
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   namespace App\Batch;
+    <?php
 
-   use Yokai\Batch\Bridge\Symfony\Framework\UserInterface\Templating\TemplatingInterface;
+    namespace App\Batch;
 
-   final class AppTemplating implements TemplatingInterface
-   {
-       public function name(string $name): string
-       {
-           return "another-$name"; // change $name if you want
-       }
+    use Yokai\Batch\Bridge\Symfony\Framework\UserInterface\Templating\TemplatingInterface;
 
-       public function context(array $context): array;
-       {
-           return \array_merge($context, ['foo' => 'bar']); // add variables to $context if you want
-       }
-   }
+    final class AppTemplating implements TemplatingInterface
+    {
+        public function name(string $name): string
+        {
+            return "another-$name"; // change $name if you want
+        }
+
+        public function context(array $context): array;
+        {
+            return \array_merge($context, ['foo' => 'bar']); // add variables to $context if you want
+        }
+    }
 
 .. note::
    You can also use the
@@ -113,57 +120,61 @@ Filtering
 
 The ``JobExecution`` list includes a filter form, but you will need another optional dependency:
 
-.. code:: shell
-   composer require symfony/form
+.. code-block:: shell
+
+    composer require symfony/form
 
 Security
 ~~~~~~~~
 
 There is no access control over ``JobExecution`` by default, you will need another optional dependency:
 
-.. code:: shell
-   composer require symfony/security-bundle
+.. code-block:: shell
+
+    composer require symfony/security-bundle
 
 Every security attribute the bundle is using is configurable:
 
-.. code:: yaml
-   # config/packages/yokai_batch.yaml
-   yokai_batch:
-     ui:
-       security:
-         attributes:
-           list: ROLE_JOB_LIST # defaults to IS_AUTHENTICATED
-           view: ROLE_JOB_VIEW # defaults to IS_AUTHENTICATED
-           traces: ROLE_JOB_TRACES # defaults to IS_AUTHENTICATED
-           logs: ROLE_JOB_LOGS # defaults to IS_AUTHENTICATED
+.. code-block:: yaml
+
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+      ui:
+        security:
+          attributes:
+            list: ROLE_JOB_LIST # defaults to IS_AUTHENTICATED
+            view: ROLE_JOB_VIEW # defaults to IS_AUTHENTICATED
+            traces: ROLE_JOB_TRACES # defaults to IS_AUTHENTICATED
+            logs: ROLE_JOB_LOGS # defaults to IS_AUTHENTICATED
 
 | Optionally, you can register a voter for these attributes.
 | This is especially useful if you need different access control rules per ``JobExecution``.
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   namespace App\Security;
+    <?php
 
-   use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-   use Symfony\Component\Security\Core\Authorization\Voter\Voter;
-   use Yokai\Batch\JobExecution;
+    namespace App\Security;
 
-   final class JobVoter extends Voter
-   {
-       protected function supports(string $attribute, mixed $subject): bool
-       {
-           return \str_starts_with($attribute, 'JOB_');
-       }
+    use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+    use Symfony\Component\Security\Core\Authorization\Voter\Voter;
+    use Yokai\Batch\JobExecution;
 
-       /**
-        * @param JobExecution|null $subject
-        */
-       protected function voteOnAttribute(string $attribute, mixed $subject, TokenInterface $token): bool
-       {
-           // TODO: Implement voteOnAttribute() method.
-       }
-   }
+    final class JobVoter extends Voter
+    {
+        protected function supports(string $attribute, mixed $subject): bool
+        {
+            return \str_starts_with($attribute, 'JOB_');
+        }
+
+        /**
+         * @param JobExecution|null $subject
+         */
+        protected function voteOnAttribute(string $attribute, mixed $subject, TokenInterface $token): bool
+        {
+            // TODO: Implement voteOnAttribute() method.
+        }
+    }
 
 Integration with SonataAdminBundle
 ----------------------------------
@@ -179,14 +190,16 @@ Integration with SonataAdminBundle
 .. image:: /_static/images/symfony/ui/sonata-children.png
 .. image:: /_static/images/symfony/ui/sonata-warnings.png
 
-.. code:: shell
-   composer require sonata-project/admin-bundle
+.. code-block:: shell
 
-.. code:: yaml
-   # config/packages/yokai_batch.yaml
-   yokai_batch:
-     ui:
-       templating: sonata
+    composer require sonata-project/admin-bundle
+
+.. code-block:: yaml
+
+    # config/packages/yokai_batch.yaml
+    yokai_batch:
+      ui:
+        templating: sonata
 
 .. note::
    With this configuration, we will look for templates like ``@YokaiBatch/sonata/*.html.twig``.

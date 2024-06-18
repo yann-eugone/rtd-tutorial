@@ -13,34 +13,37 @@ Object registry
 
 Imagine that in an ``ItemJob`` you need to find objects from a database.
 
-.. code:: php
-   use App\Entity\Product;
-   use Doctrine\Persistence\ObjectRepository;
-   use Yokai\Batch\Job\Item\ItemProcessorInterface;
+.. code-block:: php
 
-   class DenormalizeProductProcessor implements ItemProcessorInterface
-   {
-       public function __construct(
-           private ObjectRepository $repository,
-       ) {
-       }
+    <?php
 
-       /**
-        * @param array<string, mixed> $item
-        */
-       public function process(mixed $item): Product
-       {
-           $product = $this->repository->findOneBy(['sku' => $item['sku']]);
+    use App\Entity\Product;
+    use Doctrine\Persistence\ObjectRepository;
+    use Yokai\Batch\Job\Item\ItemProcessorInterface;
 
-           $product ??= new Product($item['sku']);
+    class DenormalizeProductProcessor implements ItemProcessorInterface
+    {
+        public function __construct(
+            private ObjectRepository $repository,
+        ) {
+        }
 
-           $product->setName($item['name']);
-           $product->setPrice($item['price']);
-           //...
+        /**
+         * @param array<string, mixed> $item
+         */
+        public function process(mixed $item): Product
+        {
+            $product = $this->repository->findOneBy(['sku' => $item['sku']]);
 
-           return $product;
-       }
-   }
+            $product ??= new Product($item['sku']);
+
+            $product->setName($item['name']);
+            $product->setPrice($item['price']);
+            //...
+
+            return $product;
+        }
+    }
 
 | The problem here is that every time you will call ``findOneBy``, you
   will have to query the database. The object might already be in
@@ -50,37 +53,38 @@ Imagine that in an ``ItemJob`` you need to find objects from a database.
 | The role of the ``ObjectRegistry`` is to remember found objects
   identities, and query these objects with it instead.
 
-.. code:: diff
-   use App\Entity\Product;
-   -use Doctrine\Persistence\ObjectRepository;
-   +use Yokai\Batch\Bridge\Doctrine\Persistence\ObjectRegistry;
-   use Yokai\Batch\Job\Item\ItemProcessorInterface;
+.. code-block:: diff
 
-   class DenormalizeProductProcessor implements ItemProcessorInterface
-   {
-       public function __construct(
-   -        private ObjectRepository $repository,
-   +        private ObjectRegistry $registry,
-       ) {
-       }
+    use App\Entity\Product;
+    -use Doctrine\Persistence\ObjectRepository;
+    +use Yokai\Batch\Bridge\Doctrine\Persistence\ObjectRegistry;
+    use Yokai\Batch\Job\Item\ItemProcessorInterface;
 
-       /**
-        * @param array<string, mixed> $item
-        */
-       public function process(mixed $item): Product
-       {
-   -        $product = $this->repository->findOneBy(['sku' => $item['sku']]);
-   +        $product = $this->registry->findOneBy(Product::class, ['sku' => $item['sku']]);
+    class DenormalizeProductProcessor implements ItemProcessorInterface
+    {
+        public function __construct(
+    -        private ObjectRepository $repository,
+    +        private ObjectRegistry $registry,
+        ) {
+        }
 
-           $product ??= new Product($item['sku']);
+        /**
+         * @param array<string, mixed> $item
+         */
+        public function process(mixed $item): Product
+        {
+    -        $product = $this->repository->findOneBy(['sku' => $item['sku']]);
+    +        $product = $this->registry->findOneBy(Product::class, ['sku' => $item['sku']]);
 
-           $product->setName($item['name']);
-           $product->setPrice($item['price']);
-           //...
+            $product ??= new Product($item['sku']);
 
-           return $product;
-       }
-   }
+            $product->setName($item['name']);
+            $product->setPrice($item['price']);
+            //...
+
+            return $product;
+        }
+    }
 
 | The first time, the query will hit the database, and the object identity
   will be remembered in the registry.

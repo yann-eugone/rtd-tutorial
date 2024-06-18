@@ -18,13 +18,14 @@ Job as a service
   can leverage this behaviour to register all jobs in ``src/``.
 | We will add a tag to every found class in ``src/`` that implements ``Yokai\Batch\Job\JobInterface``:
 
-.. code:: yaml
-   # config/services.yaml
-   services:
-     _defaults:
-       _instanceof:
-         Yokai\Batch\Job\JobInterface:
-           tags: ['yokai_batch.job']
+.. code-block:: yaml
+
+    # config/services.yaml
+    services:
+      _defaults:
+        _instanceof:
+          Yokai\Batch\Job\JobInterface:
+            tags: ['yokai_batch.job']
 
 Your first job
 --------------
@@ -34,26 +35,27 @@ Your first job
 | For instance, there is components that uses ``Closure``, has static constructors, ...
 | But keep in mind you can register your jobs with any other format of your choice.
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   namespace App\NamespaceOfYourChoice;
+    <?php
 
-   use Yokai\Batch\Bridge\Symfony\Framework\JobWithStaticNameInterface;
-   use Yokai\Batch\Job\JobInterface;
+    namespace App\NamespaceOfYourChoice;
 
-   final class NameOfYourJob implements JobInterface, JobWithStaticNameInterface
-   {
-       public static function getJobName(): string
-       {
-           return 'job.name';
-       }
+    use Yokai\Batch\Bridge\Symfony\Framework\JobWithStaticNameInterface;
+    use Yokai\Batch\Job\JobInterface;
 
-       public function execute(JobExecution $jobExecution): void
-       {
-           // your logic here
-       }
-   }
+    final class NameOfYourJob implements JobInterface, JobWithStaticNameInterface
+    {
+        public static function getJobName(): string
+        {
+            return 'job.name';
+        }
+
+        public function execute(JobExecution $jobExecution): void
+        {
+            // your logic here
+        }
+    }
 
 .. hint::
    | When registering jobs with dedicated class, you can use the
@@ -69,25 +71,26 @@ Triggering the job
 
 Then the job will be triggered with its name (or service id when notc specified):
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   namespace App\MyNamespace;
+    <?php
 
-   use Yokai\Batch\Storage\JobExecutionStorageInterface;
+    namespace App\MyNamespace;
 
-   final class MyClass
-   {
-       public function __construct(
-           private JobLauncherInterface $jobLauncher,
-       ) {
-       }
+    use Yokai\Batch\Storage\JobExecutionStorageInterface;
 
-       public function method(): void
-       {
-           $this->jobLauncher->launch('job.name');
-       }
-   }
+    final class MyClass
+    {
+        public function __construct(
+            private JobLauncherInterface $jobLauncher,
+        ) {
+        }
+
+        public function method(): void
+        {
+            $this->jobLauncher->launch('job.name');
+        }
+    }
 
 The job launcher that will be injected depends on the packages you have installed, order matter:
 

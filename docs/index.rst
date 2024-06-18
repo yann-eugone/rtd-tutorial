@@ -29,19 +29,20 @@ Batch will allow you to declare and execute jobs.
 
 The only requirement is implementing `JobInterface <https://github.com/yokai-php/batch/tree/0.x/src/batch/src/Job/JobInterface.php>`__,
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\Job\JobInterface;
-   use Yokai\Batch\JobExecution;
+    <?php
 
-   class ImportJob implements JobInterface
-   {
-       public function execute(JobExecution $jobExecution): void
-       {
-           // your import logic will be executed here
-       }
-   }
+    use Yokai\Batch\Job\JobInterface;
+    use Yokai\Batch\JobExecution;
+
+    class ImportJob implements JobInterface
+    {
+        public function execute(JobExecution $jobExecution): void
+        {
+            // your import logic will be executed here
+        }
+    }
 
 .. seealso::
    | :doc:`What is a job? </domain/job>`
@@ -54,25 +55,26 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 | Thus, when you ask the job launcher to “launch” a job, you have to check
   the ``JobExecution`` status that it had returned to know if the job is already executed.
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\Launcher\JobLauncherInterface;
+    <?php
 
-   class ImportController
-   {
-        public function __construct(
-            private JobLauncherInterface $launcher,
-        ) {
-        }
+    use Yokai\Batch\Launcher\JobLauncherInterface;
 
-        public function trigger()
-        {
-            $jobExecution = $this->launcher->launch('import', ['path' => '/path/to/file/to/import']);
-            // now you can look for information in JobExecution
-            // or if execution is asynchronous, redirect user to a UI where he will watch it 🍿
-        }
-   }
+    class ImportController
+    {
+         public function __construct(
+             private JobLauncherInterface $launcher,
+         ) {
+         }
+
+         public function trigger()
+         {
+             $jobExecution = $this->launcher->launch('import', ['path' => '/path/to/file/to/import']);
+             // now you can look for information in JobExecution
+             // or if execution is asynchronous, redirect user to a UI where he will watch it 🍿
+         }
+    }
 
 .. seealso::
    | :doc:`What is a job launcher? </domain/job-launcher>`
@@ -81,24 +83,25 @@ The only requirement is implementing `JobInterface <https://github.com/yokai-php
 | All the components involved in the job's execution, whenever they access the object, will be able to update it.
 | From time to time during the execution, the object will be stored, so you can access it afterwards.
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\Storage\JobExecutionStorageInterface;
+    <?php
 
-   class JobController
-   {
-        public function __construct(
-            private JobExecutionStorageInterface $jobExecutionStorage,
-        ) {
-        }
+    use Yokai\Batch\Storage\JobExecutionStorageInterface;
 
-        public function show(string $jobName, string $id)
-        {
-            $jobExecution = $this->jobExecutionStorage->retrieve($jobName, $id);
-            // here you are, build a fancy UI with live reload for the user to watch the execution 🍿
-        }
-   }
+    class JobController
+    {
+         public function __construct(
+             private JobExecutionStorageInterface $jobExecutionStorage,
+         ) {
+         }
+
+         public function show(string $jobName, string $id)
+         {
+             $jobExecution = $this->jobExecutionStorage->retrieve($jobName, $id);
+             // here you are, build a fancy UI with live reload for the user to watch the execution 🍿
+         }
+    }
 
 .. seealso::
    | :doc:`What is the job execution? </domain/job-execution>`

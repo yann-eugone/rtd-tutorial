@@ -12,19 +12,20 @@ business logic required for what you wish to achieve.
 How to create a job?
 --------------------
 
-.. code:: php
-   <?php
+.. code-block:: php
 
-   use Yokai\Batch\JobExecution;
-   use Yokai\Batch\Job\JobInterface;
+    <?php
 
-   class DoStuffJob implements JobInterface
-   {
-       public function execute(JobExecution $jobExecution): void
-       {
-           // you stuff here
-       }
-   }
+    use Yokai\Batch\JobExecution;
+    use Yokai\Batch\Job\JobInterface;
+
+    class DoStuffJob implements JobInterface
+    {
+        public function execute(JobExecution $jobExecution): void
+        {
+            // you stuff here
+        }
+    }
 
 The only requirement is implementing
 `JobInterface <https://github.com/yokai-php/batch/tree/0.x/src/Job/JobInterface.php>`__,
