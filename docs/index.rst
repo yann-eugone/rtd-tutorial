@@ -1,7 +1,7 @@
 Yokai Batch: Batch processing with PHP
 ============================================================
 
-Overview
+👀 Overview
 ------------------------------------------------------------
 
 **Yokai Batch** is batch processing job library written with PHP, with zero dependencies.
@@ -9,19 +9,21 @@ Overview
 Key Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* 📑 keep track of the execution of your jobs
-* 🚀 have base classes to handle batch processing jobs
-* ♻️ have decoupled reusable components to compose your jobs
-* 🏭 have bridges with popular libraries and frameworks
+* 👀 Keep an eye on the execution of your jobs.
+* 🚀 Provide key components to handle batch processing jobs.
+* 🧱 Have decoupled reusable components to compose your jobs.
+* 🖼️ Have bridges with popular libraries and frameworks.
 
 Quick Start Guide
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ready to dive in? Check out our :doc:`/getting-started/standalone-library` to get up and running in no time!
+| **Ready to dive in?**
+| Check out our :doc:`/getting-started/standalone-library` to get up and running in no time!
 
-Is your application using Symfony? Check out our :doc:`/getting-started/with-symfony` instead.
+| **Is your application using Symfony?**
+| Check out our :doc:`/getting-started/with-symfony` instead.
 
-Core Concepts
+🔖 Core Concepts
 ------------------------------------------------------------
 
 Get familiar with the core concepts:
@@ -30,7 +32,7 @@ Get familiar with the core concepts:
 * :doc:`/core-concepts/job-launcher`: Your application entrypoint to execute a job.
 * :doc:`/core-concepts/item-job`: A type a job that is optimized for batch processing.
 
-Tutorials and Examples
+📖 Tutorials and Examples
 ------------------------------------------------------------
 
 Build your first Job
