@@ -14,24 +14,21 @@ Key Features
 * ♻️ have decoupled reusable components to compose your jobs
 * 🏭 have bridges with popular libraries and frameworks
 
-Installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Learn how to install **Yokai Batch** on your system by following our :doc:`/getting-started/installation` guide.
-
 Quick Start Guide
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ready to dive in? Check out our :doc:`/getting-started/quick-start` to get up and running in no time!
+Ready to dive in? Check out our :doc:`/getting-started/standalone-library` to get up and running in no time!
+
+Is your application using Symfony? Check out our :doc:`/getting-started/with-symfony` instead.
 
 Core Concepts
 ------------------------------------------------------------
 
 Get familiar with the core concepts:
 
-* :doc:`/core-concepts/job`: Manage and execute your tasks efficiently.
-* :doc:`/core-concepts/job-launcher`: Manage and execute your tasks efficiently.
-* :doc:`/core-concepts/item-job`: Manage and execute your tasks efficiently.
+* :doc:`/core-concepts/job`: Contains the business logic of your tasks.
+* :doc:`/core-concepts/job-launcher`: Your application entrypoint to execute a job.
+* :doc:`/core-concepts/item-job`: A type a job that is optimized for batch processing.
 
 Tutorials and Examples
 ------------------------------------------------------------
@@ -46,7 +43,8 @@ Real world examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Explore some of the things that could be built with **Yokai Batch**:
-- :doc:`/tutorials/example-star-wars`: Import StarWars related data through Doctrine ORM
+
+* :doc:`/tutorials/example-star-wars`: Import StarWars related data through Doctrine ORM
 
 .. toctree::
    :maxdepth: 2
