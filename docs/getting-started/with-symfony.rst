@@ -118,4 +118,4 @@ Then the job will be triggered with its name:
 
 .. hint::
    | Depending on the bundle configuration, you might be injecting different implementation of ``JobLauncherInterface``.
-   | Have a look to completed documentation: :doc:`</bridges/symfony-framework>`.
+   | Have a look to completed documentation: :doc:`/bridges/symfony-framework`.
